@@ -46,11 +46,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TicketAgentForms\ViewOrderedPassengersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketAgentForms\ViewOrderedPassengersForm.Designer.cs">
+      <DependentUpon>ViewOrderedPassengersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketAgentForms\ViewPersonalDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketAgentForms\ViewPersonalDetailsForm.Designer.cs">
+      <DependentUpon>ViewPersonalDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketAgentMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketAgentMainForm.Designer.cs">
+      <DependentUpon>TicketAgentMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BL\TicketAgent.cs" />
     <Compile Include="BL\Flight.cs" />
     <Compile Include="BL\MUser.cs" />
     <Compile Include="BL\Passenger.cs" />
     <Compile Include="DL\FlightDL.cs" />
     <Compile Include="DL\MUserDL.cs" />
+    <Compile Include="DL\PassengerDL.cs" />
     <Compile Include="FlightForms\AddFlightForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +119,12 @@
     <Compile Include="PassengerForms\RequestFlightForm.Designer.cs">
       <DependentUpon>RequestFlightForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PassengerForms\UpdatePersonalDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassengerForms\UpdatePersonalDetailsForm.Designer.cs">
+      <DependentUpon>UpdatePersonalDetailsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PassengerForms\ViewBookedFlightsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +151,12 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TicketAgentForms\ViewPersonalDetailsForm.resx">
+      <DependentUpon>ViewPersonalDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketAgentMainForm.resx">
+      <DependentUpon>TicketAgentMainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FlightForms\AddFlightForm.resx">
       <DependentUpon>AddFlightForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,11 +172,17 @@
     <EmbeddedResource Include="PassengerForms\BookFlightForm.resx">
       <DependentUpon>BookFlightForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PassengerForms\CancelBookedFlightForm.resx">
+      <DependentUpon>CancelBookedFlightForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PassengerForms\PersonalDetails.resx">
       <DependentUpon>PersonalDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PassengerForms\RequestFlightForm.resx">
       <DependentUpon>RequestFlightForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassengerForms\UpdatePersonalDetailsForm.resx">
+      <DependentUpon>UpdatePersonalDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PassengerForms\ViewBookedFlightsForm.resx">
       <DependentUpon>ViewBookedFlightsForm.cs</DependentUpon>

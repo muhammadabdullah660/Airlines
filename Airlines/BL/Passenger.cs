@@ -19,6 +19,7 @@ namespace Airlines.BL
         private int child;
         private int infant;
         private List<Flight> myFlights;
+        private double total;
         public Passenger (string userName , string userPassword , string userRole , string name , string passportNo , string cnic , string eMail , string gender , string contactNum) : base(userName , userPassword , userRole)
         {
             this.Name = name;
@@ -48,12 +49,25 @@ namespace Airlines.BL
         public int Child { get => child; set => child = value; }
         public int Infant { get => infant; set => infant = value; }
         internal List<Flight> MyFlights { get => myFlights; set => myFlights = value; }
-
+        public double Total { get => total; set => total = value; }
 
         public void cancelBookedFlight (Flight myFlight)
         {
             int index = MyFlights.FindIndex(item => item == myFlight);
             MyFlights.RemoveAt(index);
+        }
+        public double calculatePrice (Flight item)
+        {
+            double x = ((Adult * item.Price) + (Child * (item.Price)) / 2 + (Infant * (item.Price) / 4));
+            return x;
+        }
+        public void calculateTotal ()
+        {
+            this.total = 0;
+            foreach (var item in MyFlights)
+            {
+                this.total += item.Price;
+            }
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 using System.Windows.Forms;
 using Airlines.BL;
 using Airlines.DL;
@@ -26,6 +27,7 @@ namespace Airlines
         private void SignIn_Load (object sender , EventArgs e)
         {
             //this.SetDesktopLocation(10 , 10);
+            //ChangeLanguage("es-ES");
 
         }
 
@@ -38,26 +40,39 @@ namespace Airlines
         {
 
         }
-
+       /* private void ChangeLanguage (string lang)
+        {
+            foreach (Control c in this.Controls)
+            {
+                ComponentResourceManager resources = new ComponentResourceManager(typeof(SignIn));
+                resources.ApplyResources(c , c.Name , new CultureInfo(lang));
+            }
+        }*/
         private void btnNext_Click (object sender , EventArgs e)
         {
+
             string userName = txtUserName.Text;
             string userPassword = txtPassword.Text;
             string path = "MUser.txt";
             MUser user = new MUser(userName , userPassword);
             MUser userX = MUserDL.isValid(user);
-            userX = new Passenger();
-            Passenger p = new Passenger();
-            p = (Passenger)userX;
+
             if (!userX.isAdmin())
             {
+                userX = new Passenger();
+                Passenger p = new Passenger();
+                p = (Passenger)userX;
                 PassengerMainForm pass = new PassengerMainForm(p);
                 pass.Show();
 
             }
             else if (userX.isAdmin())
             {
-
+                userX = new TicketAgent();
+                TicketAgent a = new TicketAgent();
+                a = (TicketAgent)userX;
+                TicketAgentMainForm adm = new TicketAgentMainForm(a);
+                adm.Show();
             }
             else
             {

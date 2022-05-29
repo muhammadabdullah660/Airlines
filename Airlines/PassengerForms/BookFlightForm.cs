@@ -30,13 +30,12 @@ namespace Airlines.PassengerForms
         {
             Flight myFlight = new Flight(cmbxDepartCity.Text , cmbxArrCity.Text , cmbxTripType.Text , mskdtxtbxDate.Text);
             Flight item = FlightDL.checkFlight(myFlight);
-            double x;
-            int Adult = int.Parse(mskdtxtbxAdult.Text);
-            int Child = int.Parse(mskdtxtbxChild.Text);
-            int Infant = int.Parse(mskdtxtbxInfant.Text);
-            x = ((Adult * item.Price) + (Child * (item.Price)) / 2 + (Infant * (item.Price) / 4));
+            p.Adult = int.Parse(mskdtxtbxAdult.Text);
+            p.Child = int.Parse(mskdtxtbxChild.Text);
+            p.Infant = int.Parse(mskdtxtbxInfant.Text);
+            double x = p.calculatePrice(item);
             myFlight.Price = x;
-            myFlight.Seats = Adult + Child + Infant;
+            myFlight.Seats = p.Adult + p.Child + p.Infant;
             p.MyFlights.Add(myFlight);
             MessageBox.Show("Saved");
         }
