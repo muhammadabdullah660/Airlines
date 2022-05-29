@@ -200,6 +200,7 @@ namespace Airlines.FlightForms
             this.btnSave.TabIndex = 65;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnBack
             // 
@@ -210,6 +211,7 @@ namespace Airlines.FlightForms
             this.btnBack.TabIndex = 64;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // UpdateFlightForm
             // 

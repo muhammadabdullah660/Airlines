@@ -20,12 +20,16 @@ namespace Airlines.FlightForms
             InitializeComponent();
         }
 
-
+        private void FlightViewForm_Load (object sender , EventArgs e)
+        {
+            FlightDL.loadFromFile(path);
+            gvFlights.DataSource = FlightDL.FlightsList;//Introspection
+        }
         public void dataBind ()
         {
-            gvUsers.DataSource = null;
-            gvUsers.DataSource = FlightDL.FlightsList;
-            gvUsers.Refresh();
+            gvFlights.DataSource = null;
+            gvFlights.DataSource = FlightDL.FlightsList;
+            gvFlights.Refresh();
         }
 
         private void btnNew_Click (object sender , EventArgs e)
@@ -36,16 +40,16 @@ namespace Airlines.FlightForms
             dataBind();
         }
 
-        private void gvUsers_CellContentClick (object sender , DataGridViewCellEventArgs e)
+        private void gvFlights_CellContentClick (object sender , DataGridViewCellEventArgs e)
         {
-            Flight newFlight = (Flight)gvUsers.CurrentRow.DataBoundItem;
-            if (gvUsers.Columns["Delete"].Index == e.ColumnIndex)
+            Flight newFlight = (Flight)gvFlights.CurrentRow.DataBoundItem;
+            if (gvFlights.Columns["Delete"].Index == e.ColumnIndex)
             {
                 FlightDL.cancelFlight(newFlight);
                 FlightDL.storeAllFlightsIntoFile(path);
                 dataBind();
             }
-            else if (gvUsers.Columns["Edit"].Index == e.ColumnIndex)
+            else if (gvFlights.Columns["Edit"].Index == e.ColumnIndex)
             {
                 UpdateFlightForm newForm = new UpdateFlightForm(newFlight);
                 newForm.ShowDialog();
@@ -54,10 +58,6 @@ namespace Airlines.FlightForms
             }
         }
 
-        private void FlightViewForm_Load (object sender , EventArgs e)
-        {
-            FlightDL.loadFromFile(path);
-            gvUsers.DataSource = FlightDL.FlightsList;//Introspection
-        }
+
     }
 }

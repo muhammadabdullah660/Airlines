@@ -17,6 +17,12 @@ namespace Airlines.FlightForms
 
 
         private Flight previous;
+        public UpdateFlightForm (Flight previous)
+        {
+            InitializeComponent();
+            this.previous = previous;
+
+        }
         private void UpdateFlightForm_Load (object sender , EventArgs e)
         {
             txtDept.Text = previous.DepartCity;
@@ -27,19 +33,19 @@ namespace Airlines.FlightForms
             mskdtxtbxSeats.Text = (previous.Seats).ToString();
             mskdtxtbxPrice.Text = (previous.Price).ToString();
         }
-        public UpdateFlightForm (Flight previous)
-        {
-            InitializeComponent();
-            this.previous = previous;
 
-        }
 
 
 
         private void btnSave_Click (object sender , EventArgs e)
         {
-            /*     MUser updated = new MUser(txtUserName.Text , txtPassword.Text , txtRole.Text);
-                 FlightDL.editFlightFromList(previous , updated);*/
+            Flight updated = new Flight(txtDept.Text , txtArr.Text , cmbxTrip.Text , mskdtxtbxDate.Text , mskdtxtbxTime.Text , int.Parse(mskdtxtbxSeats.Text) , int.Parse(mskdtxtbxPrice.Text));
+            FlightDL.editFlightFromList(previous , updated);
+            MessageBox.Show("Updated Successfully");
+        }
+
+        private void btnBack_Click (object sender , EventArgs e)
+        {
             this.Close();
         }
     }

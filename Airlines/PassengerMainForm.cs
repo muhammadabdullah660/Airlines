@@ -41,17 +41,31 @@ namespace Airlines
 
         private void requestToolStripMenuItem_Click (object sender , EventArgs e)
         {
-
+            PersonalDetails reqFlightForm = new PersonalDetails(p);
+            reqFlightForm.Show();
         }
 
         private void myFlightsToolStripMenuItem_Click (object sender , EventArgs e)
         {
-
+            ViewBookedFlightsForm viewFlight = new ViewBookedFlightsForm(p);
+            viewFlight.Show();
         }
 
         private void cancelToolStripMenuItem_Click (object sender , EventArgs e)
         {
+            CancelBookedFlightForm cancelBookedFlight = new CancelBookedFlightForm(p);
+            cancelBookedFlight.Show();
+        }
 
+        private void passengerMenuStrp_ItemClicked (object sender , ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void updatePersonalDetailsToolStripMenuItem_Click (object sender , EventArgs e)
+        {
+            UpdatePersonalDetailsForm updateDetails = new UpdatePersonalDetailsForm(p);
+            updateDetails.Show();
         }
     }
 }

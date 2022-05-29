@@ -20,6 +20,10 @@ namespace Airlines.DL
         {
             FlightsList.Add(newFlight);
         }
+        public static void addReqFlightIntoList (Flight reqFlight)
+        {
+            RequestedFlightsList.Add(reqFlight);
+        }
         public static Flight checkFlight (Flight newFlight)
         {
             foreach (Flight item in FlightsList)

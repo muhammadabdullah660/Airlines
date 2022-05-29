@@ -15,3 +15,6 @@ D:\UET\Second Semester\OOP Lab\Business App - Forms\Airlines\Airlines\obj\Debug\
 D:\UET\Second Semester\OOP Lab\Business App - Forms\Airlines\Airlines\obj\Debug\Airlines.FlightForms.FlightViewForm.resources
 D:\UET\Second Semester\OOP Lab\Business App - Forms\Airlines\Airlines\obj\Debug\Airlines.FlightForms.UpdateFlightForm.resources
 D:\UET\Second Semester\OOP Lab\Business App - Forms\Airlines\Airlines\obj\Debug\Airlines.PassengerForms.PersonalDetails.resources
+D:\UET\Second Semester\OOP Lab\Business App - Forms\Airlines\Airlines\obj\Debug\Airlines.PassengerForms.BookFlightForm.resources
+D:\UET\Second Semester\OOP Lab\Business App - Forms\Airlines\Airlines\obj\Debug\Airlines.PassengerForms.RequestFlightForm.resources
+D:\UET\Second Semester\OOP Lab\Business App - Forms\Airlines\Airlines\obj\Debug\Airlines.PassengerForms.ViewBookedFlightsForm.resources

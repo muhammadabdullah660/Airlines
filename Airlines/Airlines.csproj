@@ -75,11 +75,35 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="PassengerForms\BookFlightForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassengerForms\BookFlightForm.Designer.cs">
+      <DependentUpon>BookFlightForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PassengerForms\CancelBookedFlightForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassengerForms\CancelBookedFlightForm.Designer.cs">
+      <DependentUpon>CancelBookedFlightForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PassengerForms\PersonalDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PassengerForms\PersonalDetails.Designer.cs">
       <DependentUpon>PersonalDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PassengerForms\RequestFlightForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassengerForms\RequestFlightForm.Designer.cs">
+      <DependentUpon>RequestFlightForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PassengerForms\ViewBookedFlightsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassengerForms\ViewBookedFlightsForm.Designer.cs">
+      <DependentUpon>ViewBookedFlightsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PassengerMainForm.cs">
       <SubType>Form</SubType>
@@ -113,8 +137,17 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PassengerForms\BookFlightForm.resx">
+      <DependentUpon>BookFlightForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PassengerForms\PersonalDetails.resx">
       <DependentUpon>PersonalDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassengerForms\RequestFlightForm.resx">
+      <DependentUpon>RequestFlightForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassengerForms\ViewBookedFlightsForm.resx">
+      <DependentUpon>ViewBookedFlightsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PassengerMainForm.resx">
       <DependentUpon>PassengerMainForm.cs</DependentUpon>

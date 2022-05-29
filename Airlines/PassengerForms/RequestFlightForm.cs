@@ -9,27 +9,27 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Airlines.BL;
 using Airlines.DL;
-using Airlines.PassengerForms;
-namespace Airlines.FlightForms
+
+namespace Airlines.PassengerForms
 {
-    public partial class AddFlightForm : Form
+    public partial class RequestFlightForm : Form
     {
-        public AddFlightForm ()
+        public RequestFlightForm ()
         {
             InitializeComponent();
         }
 
-        private void AddFlightForm_Load (object sender , EventArgs e)
+        private void RequestFlightForm_Load (object sender , EventArgs e)
         {
+
         }
-        private void btnAdd_Click (object sender , EventArgs e)
+
+        private void btnSave_Click (object sender , EventArgs e)
         {
-
-            Flight newFlight = new Flight(txtDept.Text , txtArr.Text , cmbxTrip.Text , mskdtxtbxDate.Text , mskdtxtbxTime.Text , int.Parse(mskdtxtbxSeats.Text) , int.Parse(mskdtxtbxPrice.Text));
-            FlightDL.addFlightIntoList(newFlight);
-            MessageBox.Show("Added Succesfully");
+            Flight reqFlight = new Flight(txtDept.Text , txtArr.Text , cmbxTripType.Text , mskdtxtbxDate.Text);
+            FlightDL.addReqFlightIntoList(reqFlight);
+            MessageBox.Show("Request Sent");
             resetTxt();
-
         }
         private void resetTxt ()
         {
