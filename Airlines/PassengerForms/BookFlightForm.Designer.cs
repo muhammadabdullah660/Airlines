@@ -46,13 +46,15 @@ namespace Airlines.PassengerForms
             this.mskdtxtbxInfant = new System.Windows.Forms.MaskedTextBox();
             this.mskdtxtbxChild = new System.Windows.Forms.MaskedTextBox();
             this.mskdtxtbxDate = new System.Windows.Forms.MaskedTextBox();
+            this.lblClass = new System.Windows.Forms.Label();
+            this.cmbxClass = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblTrip
             // 
             this.lblTrip.AutoSize = true;
             this.lblTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrip.Location = new System.Drawing.Point(214, 178);
+            this.lblTrip.Location = new System.Drawing.Point(211, 143);
             this.lblTrip.Name = "lblTrip";
             this.lblTrip.Size = new System.Drawing.Size(73, 17);
             this.lblTrip.TabIndex = 52;
@@ -62,7 +64,7 @@ namespace Airlines.PassengerForms
             // 
             this.lblDeptDate.AutoSize = true;
             this.lblDeptDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeptDate.Location = new System.Drawing.Point(198, 220);
+            this.lblDeptDate.Location = new System.Drawing.Point(195, 185);
             this.lblDeptDate.Name = "lblDeptDate";
             this.lblDeptDate.Size = new System.Drawing.Size(89, 17);
             this.lblDeptDate.TabIndex = 51;
@@ -70,21 +72,19 @@ namespace Airlines.PassengerForms
             // 
             // cmbxDepartCity
             // 
+            this.cmbxDepartCity.DisplayMember = "DepartCity";
             this.cmbxDepartCity.FormattingEnabled = true;
-            this.cmbxDepartCity.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Rather Not Say"});
-            this.cmbxDepartCity.Location = new System.Drawing.Point(293, 97);
+            this.cmbxDepartCity.Location = new System.Drawing.Point(290, 62);
             this.cmbxDepartCity.Name = "cmbxDepartCity";
             this.cmbxDepartCity.Size = new System.Drawing.Size(121, 21);
             this.cmbxDepartCity.TabIndex = 46;
+            this.cmbxDepartCity.TextChanged += new System.EventHandler(this.cmbxDepartCity_SelectedIndexChanged);
             // 
             // lblArrCity
             // 
             this.lblArrCity.AutoSize = true;
             this.lblArrCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArrCity.Location = new System.Drawing.Point(208, 137);
+            this.lblArrCity.Location = new System.Drawing.Point(205, 102);
             this.lblArrCity.Name = "lblArrCity";
             this.lblArrCity.Size = new System.Drawing.Size(79, 17);
             this.lblArrCity.TabIndex = 44;
@@ -94,7 +94,7 @@ namespace Airlines.PassengerForms
             // 
             this.lblDeptCity.AutoSize = true;
             this.lblDeptCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeptCity.Location = new System.Drawing.Point(184, 98);
+            this.lblDeptCity.Location = new System.Drawing.Point(181, 63);
             this.lblDeptCity.Name = "lblDeptCity";
             this.lblDeptCity.Size = new System.Drawing.Size(103, 17);
             this.lblDeptCity.TabIndex = 43;
@@ -138,26 +138,23 @@ namespace Airlines.PassengerForms
             this.cmbxTripType.Items.AddRange(new object[] {
             "One way",
             "Return"});
-            this.cmbxTripType.Location = new System.Drawing.Point(293, 178);
+            this.cmbxTripType.Location = new System.Drawing.Point(290, 143);
             this.cmbxTripType.Name = "cmbxTripType";
             this.cmbxTripType.Size = new System.Drawing.Size(121, 21);
             this.cmbxTripType.TabIndex = 56;
             // 
             // cmbxArrCity
             // 
+            this.cmbxArrCity.DisplayMember = "ArrCity";
             this.cmbxArrCity.FormattingEnabled = true;
-            this.cmbxArrCity.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Rather Not Say"});
-            this.cmbxArrCity.Location = new System.Drawing.Point(293, 137);
+            this.cmbxArrCity.Location = new System.Drawing.Point(290, 102);
             this.cmbxArrCity.Name = "cmbxArrCity";
             this.cmbxArrCity.Size = new System.Drawing.Size(121, 21);
             this.cmbxArrCity.TabIndex = 57;
             // 
             // mskdtxtbxAdult
             // 
-            this.mskdtxtbxAdult.Location = new System.Drawing.Point(293, 258);
+            this.mskdtxtbxAdult.Location = new System.Drawing.Point(290, 223);
             this.mskdtxtbxAdult.Mask = "00000";
             this.mskdtxtbxAdult.Name = "mskdtxtbxAdult";
             this.mskdtxtbxAdult.Size = new System.Drawing.Size(121, 20);
@@ -168,7 +165,7 @@ namespace Airlines.PassengerForms
             // 
             this.lblAdult.AutoSize = true;
             this.lblAdult.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdult.Location = new System.Drawing.Point(243, 259);
+            this.lblAdult.Location = new System.Drawing.Point(240, 224);
             this.lblAdult.Name = "lblAdult";
             this.lblAdult.Size = new System.Drawing.Size(44, 17);
             this.lblAdult.TabIndex = 60;
@@ -178,7 +175,7 @@ namespace Airlines.PassengerForms
             // 
             this.lblInfant.AutoSize = true;
             this.lblInfant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfant.Location = new System.Drawing.Point(239, 330);
+            this.lblInfant.Location = new System.Drawing.Point(236, 295);
             this.lblInfant.Name = "lblInfant";
             this.lblInfant.Size = new System.Drawing.Size(47, 17);
             this.lblInfant.TabIndex = 61;
@@ -188,7 +185,7 @@ namespace Airlines.PassengerForms
             // 
             this.lblChild.AutoSize = true;
             this.lblChild.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChild.Location = new System.Drawing.Point(243, 295);
+            this.lblChild.Location = new System.Drawing.Point(240, 260);
             this.lblChild.Name = "lblChild";
             this.lblChild.Size = new System.Drawing.Size(43, 17);
             this.lblChild.TabIndex = 62;
@@ -196,7 +193,7 @@ namespace Airlines.PassengerForms
             // 
             // mskdtxtbxInfant
             // 
-            this.mskdtxtbxInfant.Location = new System.Drawing.Point(293, 329);
+            this.mskdtxtbxInfant.Location = new System.Drawing.Point(290, 294);
             this.mskdtxtbxInfant.Mask = "00000";
             this.mskdtxtbxInfant.Name = "mskdtxtbxInfant";
             this.mskdtxtbxInfant.Size = new System.Drawing.Size(121, 20);
@@ -205,7 +202,7 @@ namespace Airlines.PassengerForms
             // 
             // mskdtxtbxChild
             // 
-            this.mskdtxtbxChild.Location = new System.Drawing.Point(293, 295);
+            this.mskdtxtbxChild.Location = new System.Drawing.Point(290, 260);
             this.mskdtxtbxChild.Mask = "00000";
             this.mskdtxtbxChild.Name = "mskdtxtbxChild";
             this.mskdtxtbxChild.Size = new System.Drawing.Size(121, 20);
@@ -214,18 +211,41 @@ namespace Airlines.PassengerForms
             // 
             // mskdtxtbxDate
             // 
-            this.mskdtxtbxDate.Location = new System.Drawing.Point(293, 219);
+            this.mskdtxtbxDate.Location = new System.Drawing.Point(290, 184);
             this.mskdtxtbxDate.Mask = "00/00/0000";
             this.mskdtxtbxDate.Name = "mskdtxtbxDate";
             this.mskdtxtbxDate.Size = new System.Drawing.Size(121, 20);
             this.mskdtxtbxDate.TabIndex = 65;
             this.mskdtxtbxDate.ValidatingType = typeof(System.DateTime);
             // 
+            // lblClass
+            // 
+            this.lblClass.AutoSize = true;
+            this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass.Location = new System.Drawing.Point(198, 336);
+            this.lblClass.Name = "lblClass";
+            this.lblClass.Size = new System.Drawing.Size(84, 17);
+            this.lblClass.TabIndex = 67;
+            this.lblClass.Text = "Flight Class:";
+            // 
+            // cmbxClass
+            // 
+            this.cmbxClass.FormattingEnabled = true;
+            this.cmbxClass.Items.AddRange(new object[] {
+            "Economy ",
+            "Business"});
+            this.cmbxClass.Location = new System.Drawing.Point(290, 332);
+            this.cmbxClass.Name = "cmbxClass";
+            this.cmbxClass.Size = new System.Drawing.Size(101, 21);
+            this.cmbxClass.TabIndex = 66;
+            // 
             // BookFlightForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblClass);
+            this.Controls.Add(this.cmbxClass);
             this.Controls.Add(this.mskdtxtbxDate);
             this.Controls.Add(this.mskdtxtbxChild);
             this.Controls.Add(this.mskdtxtbxInfant);
@@ -269,5 +289,7 @@ namespace Airlines.PassengerForms
         private System.Windows.Forms.MaskedTextBox mskdtxtbxInfant;
         private System.Windows.Forms.MaskedTextBox mskdtxtbxChild;
         private System.Windows.Forms.MaskedTextBox mskdtxtbxDate;
+        private System.Windows.Forms.Label lblClass;
+        private System.Windows.Forms.ComboBox cmbxClass;
     }
 }

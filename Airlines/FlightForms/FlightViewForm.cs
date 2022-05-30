@@ -22,7 +22,6 @@ namespace Airlines.FlightForms
 
         private void FlightViewForm_Load (object sender , EventArgs e)
         {
-            FlightDL.loadFromFile(path);
             gvFlights.DataSource = FlightDL.FlightsList;//Introspection
         }
         public void dataBind ()

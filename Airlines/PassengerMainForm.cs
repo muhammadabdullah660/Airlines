@@ -15,6 +15,7 @@ namespace Airlines
     public partial class PassengerMainForm : Form
     {
         private Passenger p;
+        private string path = "Passenger.txt";
         public PassengerMainForm (Passenger p)
         {
             InitializeComponent();
@@ -66,6 +67,12 @@ namespace Airlines
         {
             UpdatePersonalDetailsForm updateDetails = new UpdatePersonalDetailsForm(p);
             updateDetails.Show();
+        }
+
+        private void btnLogOut_Click (object sender , EventArgs e)
+        {
+            PassengerDL.storeIntoFile(path , p);
+            this.Close();
         }
     }
 }

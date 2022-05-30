@@ -34,10 +34,10 @@ namespace Airlines.FlightForms
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gvFlights = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnNew = new System.Windows.Forms.Button();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.gvFlights)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -49,6 +49,7 @@ namespace Airlines.FlightForms
             // 
             this.Delete.HeaderText = "Delete";
             this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
             this.Delete.Text = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
@@ -56,6 +57,7 @@ namespace Airlines.FlightForms
             // 
             this.Edit.HeaderText = "Edit";
             this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
             this.Edit.Text = "Edit";
             this.Edit.UseColumnTextForButtonValue = true;
             // 
@@ -65,9 +67,10 @@ namespace Airlines.FlightForms
             this.gvFlights.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Edit,
             this.Delete});
-            this.gvFlights.Location = new System.Drawing.Point(-1 , 0);
+            this.gvFlights.Location = new System.Drawing.Point(-1, 0);
             this.gvFlights.Name = "gvFlights";
-            this.gvFlights.Size = new System.Drawing.Size(800 , 351);
+            this.gvFlights.ReadOnly = true;
+            this.gvFlights.Size = new System.Drawing.Size(800, 351);
             this.gvFlights.TabIndex = 0;
             this.gvFlights.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvFlights_CellContentClick);
             // 
@@ -76,61 +79,61 @@ namespace Airlines.FlightForms
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel4);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel3);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3 , 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(794 , 94);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(794, 94);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(535 , 3);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(238 , 91);
-            this.flowLayoutPanel3.TabIndex = 1;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(273 , 3);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(256 , 91);
-            this.flowLayoutPanel2.TabIndex = 0;
             // 
             // flowLayoutPanel4
             // 
             this.flowLayoutPanel4.Controls.Add(this.btnNew);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(3 , 3);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(264 , 91);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(264, 91);
             this.flowLayoutPanel4.TabIndex = 1;
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(3 , 3);
+            this.btnNew.Location = new System.Drawing.Point(3, 3);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75 , 46);
+            this.btnNew.Size = new System.Drawing.Size(75, 46);
             this.btnNew.TabIndex = 0;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(273, 3);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(256, 91);
+            this.flowLayoutPanel2.TabIndex = 0;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(535, 3);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(238, 91);
+            this.flowLayoutPanel3.TabIndex = 1;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent , 50F));
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1 , 0 , 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0 , 350);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 350);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent , 48F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800 , 100);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 100);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // FlightViewForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F , 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800 , 450);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.gvFlights);
             this.Name = "FlightViewForm";

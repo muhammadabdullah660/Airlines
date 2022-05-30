@@ -20,7 +20,8 @@ namespace Airlines
             //this.SetDesktopLocation(10 , 10);
             string path = "MUser.txt";
             string path1 = "Flight.txt";
-            if (MUserDL.loadFromFile(path) && FlightDL.loadFromFile(path1))
+            string path2 = "Passenger.txt";
+            if (MUserDL.loadFromFile(path) && FlightDL.loadFromFile(path1) && PassengerDL.loadFromFile(path2))
             {
                 MessageBox.Show("Data Successfully Loaded");
             }

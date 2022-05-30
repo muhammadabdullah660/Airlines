@@ -60,6 +60,7 @@ namespace Airlines.TicketAgentForms
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // flowLayoutPanel1
             // 
@@ -70,6 +71,7 @@ namespace Airlines.TicketAgentForms
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(794, 444);
             this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // gvPassengers
             // 
@@ -79,6 +81,7 @@ namespace Airlines.TicketAgentForms
             this.gvPassengers.Name = "gvPassengers";
             this.gvPassengers.Size = new System.Drawing.Size(794, 399);
             this.gvPassengers.TabIndex = 4;
+            this.gvPassengers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvPassengers_CellContentClick);
             // 
             // ViewPersonalDetailsForm
             // 

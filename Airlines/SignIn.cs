@@ -40,14 +40,14 @@ namespace Airlines
         {
 
         }
-       /* private void ChangeLanguage (string lang)
-        {
-            foreach (Control c in this.Controls)
-            {
-                ComponentResourceManager resources = new ComponentResourceManager(typeof(SignIn));
-                resources.ApplyResources(c , c.Name , new CultureInfo(lang));
-            }
-        }*/
+        /* private void ChangeLanguage (string lang)
+         {
+             foreach (Control c in this.Controls)
+             {
+                 ComponentResourceManager resources = new ComponentResourceManager(typeof(SignIn));
+                 resources.ApplyResources(c , c.Name , new CultureInfo(lang));
+             }
+         }*/
         private void btnNext_Click (object sender , EventArgs e)
         {
 
@@ -60,7 +60,7 @@ namespace Airlines
             if (!userX.isAdmin())
             {
                 userX = new Passenger();
-                Passenger p = new Passenger();
+                Passenger p;
                 p = (Passenger)userX;
                 PassengerMainForm pass = new PassengerMainForm(p);
                 pass.Show();

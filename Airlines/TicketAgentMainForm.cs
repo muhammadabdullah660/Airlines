@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Airlines.BL;
 using Airlines.FlightForms;
+using Airlines.TicketAgentForms;
 namespace Airlines
 {
     public partial class TicketAgentMainForm : Form
@@ -38,10 +39,17 @@ namespace Airlines
 
         private void personalToolStripMenuItem1_Click (object sender , EventArgs e)
         {
-
+            ViewPersonalDetailsForm persForm = new ViewPersonalDetailsForm();
+            persForm.Show();
         }
 
         private void orderedPassengersToolStripMenuItem_Click (object sender , EventArgs e)
+        {
+            ViewOrderedPassengersForm ordForm = new ViewOrderedPassengersForm();
+            ordForm.Show();
+        }
+
+        private void passengersToolStripMenuItem_Click (object sender , EventArgs e)
         {
 
         }

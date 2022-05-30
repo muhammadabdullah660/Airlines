@@ -151,6 +151,9 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TicketAgentForms\ViewOrderedPassengersForm.resx">
+      <DependentUpon>ViewOrderedPassengersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TicketAgentForms\ViewPersonalDetailsForm.resx">
       <DependentUpon>ViewPersonalDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +208,8 @@
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\Airlines.BL.Passenger.datasource" />
+    <None Include="Properties\DataSources\Airlines.DL.PassengerDL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

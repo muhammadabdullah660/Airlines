@@ -14,11 +14,10 @@ namespace Airlines.BL
         private string eMail;
         private string gender;
         private string contactNum;
-        private string travelClass;
         private int adult;
         private int child;
         private int infant;
-        private List<Flight> myFlights;
+        private List<Flight> myFlights = new List<Flight>();
         private double total;
         public Passenger (string userName , string userPassword , string userRole , string name , string passportNo , string cnic , string eMail , string gender , string contactNum) : base(userName , userPassword , userRole)
         {
@@ -44,7 +43,6 @@ namespace Airlines.BL
         public string EMail { get => eMail; set => eMail = value; }
         public string Gender { get => gender; set => gender = value; }
         public string ContactNum { get => contactNum; set => contactNum = value; }
-        public string TravelClass { get => travelClass; set => travelClass = value; }
         public int Adult { get => adult; set => adult = value; }
         public int Child { get => child; set => child = value; }
         public int Infant { get => infant; set => infant = value; }
@@ -56,10 +54,19 @@ namespace Airlines.BL
             int index = MyFlights.FindIndex(item => item == myFlight);
             MyFlights.RemoveAt(index);
         }
-        public double calculatePrice (Flight item)
+        public double calculatePrice (Flight item , Flight myFlight)
         {
             double x = ((Adult * item.Price) + (Child * (item.Price)) / 2 + (Infant * (item.Price) / 4));
+            x += myFlight.Seats * checkClass(myFlight);
             return x;
+        }
+        public double checkClass (Flight myFlight)
+        {
+            if (myFlight.FlightClass == "Business")
+            {
+                return 10000;
+            }
+            return 0;
         }
         public void calculateTotal ()
         {
@@ -68,6 +75,10 @@ namespace Airlines.BL
             {
                 this.total += item.Price;
             }
+        }
+        public void bookFlight (Flight myFlight)
+        {
+            MyFlights.Add(myFlight);
         }
     }
 }

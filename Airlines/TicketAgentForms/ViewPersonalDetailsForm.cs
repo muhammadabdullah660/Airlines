@@ -28,5 +28,20 @@ namespace Airlines.TicketAgentForms
         {
             this.Close();
         }
+
+        private void gvPassengers_CellContentClick (object sender , DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint (object sender , PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint (object sender , PaintEventArgs e)
+        {
+
+        }
     }
 }

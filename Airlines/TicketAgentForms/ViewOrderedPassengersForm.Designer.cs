@@ -33,6 +33,7 @@ namespace Airlines.TicketAgentForms
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnBack = new System.Windows.Forms.Button();
+            this.Flights = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gvPassengers)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -41,11 +42,14 @@ namespace Airlines.TicketAgentForms
             // gvPassengers
             // 
             this.gvPassengers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvPassengers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gvPassengers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Flights});
             this.gvPassengers.Location = new System.Drawing.Point(3, 3);
             this.gvPassengers.Name = "gvPassengers";
+            this.gvPassengers.ReadOnly = true;
             this.gvPassengers.Size = new System.Drawing.Size(794, 399);
             this.gvPassengers.TabIndex = 4;
+            this.gvPassengers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvPassengers_CellContentClick);
             // 
             // tableLayoutPanel1
             // 
@@ -78,6 +82,16 @@ namespace Airlines.TicketAgentForms
             this.btnBack.TabIndex = 5;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // Flights
+            // 
+            this.Flights.HeaderText = "Flights";
+            this.Flights.Name = "Flights";
+            this.Flights.ReadOnly = true;
+            this.Flights.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Flights.Text = "View Flights";
+            this.Flights.UseColumnTextForButtonValue = true;
             // 
             // ViewOrderedPassengersForm
             // 
@@ -101,5 +115,6 @@ namespace Airlines.TicketAgentForms
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.DataGridViewButtonColumn Flights;
     }
 }

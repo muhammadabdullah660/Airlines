@@ -32,6 +32,7 @@ namespace Airlines.FlightForms
             mskdtxtbxTime.Text = previous.DepartTime;
             mskdtxtbxSeats.Text = (previous.Seats).ToString();
             mskdtxtbxPrice.Text = (previous.Price).ToString();
+            cmbxClass.Text = previous.FlightClass;
         }
 
 
@@ -39,7 +40,7 @@ namespace Airlines.FlightForms
 
         private void btnSave_Click (object sender , EventArgs e)
         {
-            Flight updated = new Flight(txtDept.Text , txtArr.Text , cmbxTrip.Text , mskdtxtbxDate.Text , mskdtxtbxTime.Text , int.Parse(mskdtxtbxSeats.Text) , int.Parse(mskdtxtbxPrice.Text));
+            Flight updated = new Flight(txtDept.Text , txtArr.Text , cmbxTrip.Text , mskdtxtbxDate.Text , mskdtxtbxTime.Text , int.Parse(mskdtxtbxSeats.Text) , int.Parse(mskdtxtbxPrice.Text) , cmbxClass.Text);
             FlightDL.editFlightFromList(previous , updated);
             MessageBox.Show("Updated Successfully");
         }

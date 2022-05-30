@@ -22,10 +22,10 @@ namespace Airlines.FlightForms
         private void AddFlightForm_Load (object sender , EventArgs e)
         {
         }
-        private void btnAdd_Click (object sender , EventArgs e)
+        private void btnSave_Click (object sender , EventArgs e)
         {
 
-            Flight newFlight = new Flight(txtDept.Text , txtArr.Text , cmbxTrip.Text , mskdtxtbxDate.Text , mskdtxtbxTime.Text , int.Parse(mskdtxtbxSeats.Text) , int.Parse(mskdtxtbxPrice.Text));
+            Flight newFlight = new Flight(txtDept.Text , txtArr.Text , cmbxTrip.Text , mskdtxtbxDate.Text , mskdtxtbxTime.Text , int.Parse(mskdtxtbxSeats.Text) , int.Parse(mskdtxtbxPrice.Text),cmbxClass.Text);
             FlightDL.addFlightIntoList(newFlight);
             MessageBox.Show("Added Succesfully");
             resetTxt();

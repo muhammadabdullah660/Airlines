@@ -61,6 +61,7 @@ namespace Airlines.DL
                     item.Seats = updated.Seats;
                     item.Price = updated.Price;
                     item.TripType = updated.TripType;
+                    item.FlightClass = updated.FlightClass;
                 }
             }
         }
@@ -80,7 +81,8 @@ namespace Airlines.DL
                     string departTime = (splittedRecord[4]);
                     int seats = int.Parse(splittedRecord[5]);
                     int price = int.Parse(splittedRecord[6]);
-                    Flight newFlight = new Flight(departCity , arrCity , tripType , departDate , departTime , seats , price);
+                    string flightClass = (splittedRecord[7]);
+                    Flight newFlight = new Flight(departCity , arrCity , tripType , departDate , departTime , seats , price , flightClass);
                     addFlightIntoList(newFlight);
 
                 }
@@ -96,7 +98,7 @@ namespace Airlines.DL
         {
 
             StreamWriter f = new StreamWriter(path , true);
-            f.WriteLine(newFlight.DepartCity + "," + newFlight.ArrCity + "," + newFlight.TripType + "," + newFlight.DepartDate + "," + newFlight.DepartTime + "," + newFlight.Seats + "," + newFlight.Price);
+            f.WriteLine(newFlight.DepartCity + "," + newFlight.ArrCity + "," + newFlight.TripType + "," + newFlight.DepartDate + "," + newFlight.DepartTime + "," + newFlight.Seats + "," + newFlight.Price + "," + newFlight.FlightClass);
             f.Flush();
             f.Close();
         }
@@ -106,7 +108,7 @@ namespace Airlines.DL
             StreamWriter f = new StreamWriter(path);
             foreach (var newFlight in FlightsList)
             {
-                f.WriteLine(newFlight.DepartCity + "," + newFlight.ArrCity + "," + newFlight.TripType + "," + newFlight.DepartDate + "," + newFlight.DepartTime + "," + newFlight.Seats + "," + newFlight.Price);
+                f.WriteLine(newFlight.DepartCity + "," + newFlight.ArrCity + "," + newFlight.TripType + "," + newFlight.DepartDate + "," + newFlight.DepartTime + "," + newFlight.Seats + "," + newFlight.Price + "," + newFlight.FlightClass);
             }
             f.Flush();
             f.Close();

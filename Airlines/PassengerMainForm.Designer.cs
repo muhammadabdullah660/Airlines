@@ -38,6 +38,7 @@ namespace Airlines
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updatePersonalDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.passengerMenuStrp.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +71,7 @@ namespace Airlines
             this.personalToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5);
             this.personalToolStripMenuItem.Name = "personalToolStripMenuItem";
             this.personalToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.personalToolStripMenuItem.Size = new System.Drawing.Size(126, 30);
+            this.personalToolStripMenuItem.Size = new System.Drawing.Size(121, 30);
             this.personalToolStripMenuItem.Text = "Personal Details";
             this.personalToolStripMenuItem.Click += new System.EventHandler(this.personalToolStripMenuItem_Click);
             // 
@@ -81,7 +82,7 @@ namespace Airlines
             this.bookToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5);
             this.bookToolStripMenuItem.Name = "bookToolStripMenuItem";
             this.bookToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.bookToolStripMenuItem.Size = new System.Drawing.Size(126, 30);
+            this.bookToolStripMenuItem.Size = new System.Drawing.Size(121, 30);
             this.bookToolStripMenuItem.Text = "Book a Flight";
             this.bookToolStripMenuItem.Click += new System.EventHandler(this.bookToolStripMenuItem_Click);
             // 
@@ -92,7 +93,7 @@ namespace Airlines
             this.requestToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5);
             this.requestToolStripMenuItem.Name = "requestToolStripMenuItem";
             this.requestToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.requestToolStripMenuItem.Size = new System.Drawing.Size(126, 30);
+            this.requestToolStripMenuItem.Size = new System.Drawing.Size(121, 30);
             this.requestToolStripMenuItem.Text = "Request a Flight";
             this.requestToolStripMenuItem.Click += new System.EventHandler(this.requestToolStripMenuItem_Click);
             // 
@@ -103,7 +104,7 @@ namespace Airlines
             this.myFlightsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5);
             this.myFlightsToolStripMenuItem.Name = "myFlightsToolStripMenuItem";
             this.myFlightsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.myFlightsToolStripMenuItem.Size = new System.Drawing.Size(126, 30);
+            this.myFlightsToolStripMenuItem.Size = new System.Drawing.Size(121, 30);
             this.myFlightsToolStripMenuItem.Text = "My Flights";
             this.myFlightsToolStripMenuItem.Click += new System.EventHandler(this.myFlightsToolStripMenuItem_Click);
             // 
@@ -114,7 +115,7 @@ namespace Airlines
             this.cancelToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5);
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
             this.cancelToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(126, 30);
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(121, 30);
             this.cancelToolStripMenuItem.Text = "Cancel a Flight";
             this.cancelToolStripMenuItem.Click += new System.EventHandler(this.cancelToolStripMenuItem_Click);
             // 
@@ -125,7 +126,7 @@ namespace Airlines
             this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.aboutToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5, 5, 5, 15);
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(126, 20);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // contactUsToolStripMenuItem
@@ -135,7 +136,7 @@ namespace Airlines
             this.contactUsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.contactUsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
             this.contactUsToolStripMenuItem.Name = "contactUsToolStripMenuItem";
-            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(126, 20);
+            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
             this.contactUsToolStripMenuItem.Text = "Contact Us";
             // 
             // updatePersonalDetailsToolStripMenuItem
@@ -148,11 +149,22 @@ namespace Airlines
             this.updatePersonalDetailsToolStripMenuItem.Text = "Update Personal Details";
             this.updatePersonalDetailsToolStripMenuItem.Click += new System.EventHandler(this.updatePersonalDetailsToolStripMenuItem_Click);
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Location = new System.Drawing.Point(713, 12);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(75, 23);
+            this.btnLogOut.TabIndex = 5;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // PassengerMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.passengerMenuStrp);
             this.Name = "PassengerMainForm";
             this.Text = "PassengerMainForm";
@@ -174,5 +186,6 @@ namespace Airlines
         private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem myFlightsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updatePersonalDetailsToolStripMenuItem;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }

@@ -63,6 +63,7 @@ namespace Airlines
             this.passengersToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5);
             this.passengersToolStripMenuItem.Name = "passengersToolStripMenuItem";
             this.passengersToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
+            this.passengersToolStripMenuItem.Click += new System.EventHandler(this.passengersToolStripMenuItem_Click);
             // 
             // personalToolStripMenuItem1
             // 
