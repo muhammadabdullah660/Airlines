@@ -22,18 +22,7 @@ namespace Airlines.TicketAgentForms
         private void ViewOrderedPassengersForm_Load (object sender , EventArgs e)
         {
             PassengerDL.sortPassengersByTotal();
-            gvPassengers.DataSource = PassengerDL.SortedPassengersList.Select(p => new
-            {
-                p.UserName ,
-                p.Name ,
-                p.Cnic ,
-                p.ContactNum ,
-                p.Gender ,
-                p.PassportNo ,
-                p.EMail ,
-                p.Total ,
-
-            }).ToList();
+            gvPassengers.DataSource = PassengerDL.SortedPassengersList;
 
             /*   Flights.DataSource = PassengerDL.SortedPassengersList.Select(c => new
                {
@@ -50,11 +39,11 @@ namespace Airlines.TicketAgentForms
         private void gvPassengers_CellContentClick (object sender , DataGridViewCellEventArgs e)
         {
             Passenger p = (Passenger)gvPassengers.CurrentRow.DataBoundItem;
-            if (gvPassengers.Columns["View Flights"].Index == e.ColumnIndex)
+            if (gvPassengers.Columns["Flights"].Index == e.ColumnIndex)
             {
                 ViewBookedFlightsForm viewForm = new ViewBookedFlightsForm(p);
                 viewForm.Show();
-                dataBind();
+                //dataBind();
             }
 
         }
