@@ -32,10 +32,6 @@ namespace Airlines.PassengerForms
             MessageBox.Show("Details Saved");
         }
 
-        private void txtName_TextChanged (object sender , EventArgs e)
-        {
-
-        }
 
         private void btnBack_Click (object sender , EventArgs e)
         {

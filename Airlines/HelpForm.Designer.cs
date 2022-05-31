@@ -29,211 +29,154 @@ namespace Airlines
         /// </summary>
         private void InitializeComponent ()
         {
-            this.mskdtxtbxContact = new System.Windows.Forms.MaskedTextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.mskdtxtbxCnic = new System.Windows.Forms.MaskedTextBox();
-            this.lblContact = new System.Windows.Forms.Label();
-            this.lblCNIC = new System.Windows.Forms.Label();
-            this.txtPassport = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.cmbxGender = new System.Windows.Forms.ComboBox();
-            this.lblGender = new System.Windows.Forms.Label();
-            this.lblPassport = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblMainHeading = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.passengerMenuStrp = new System.Windows.Forms.MenuStrip();
+            this.personalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.requestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.myFlightsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contactUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updatePersonalDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.passengerMenuStrp.SuspendLayout();
             this.SuspendLayout();
             // 
-            // mskdtxtbxContact
+            // passengerMenuStrp
             // 
-            this.mskdtxtbxContact.Location = new System.Drawing.Point(226, 282);
-            this.mskdtxtbxContact.Mask = "0000-0000000";
-            this.mskdtxtbxContact.Name = "mskdtxtbxContact";
-            this.mskdtxtbxContact.Size = new System.Drawing.Size(281, 20);
-            this.mskdtxtbxContact.TabIndex = 58;
+            this.passengerMenuStrp.AutoSize = false;
+            this.passengerMenuStrp.BackColor = System.Drawing.Color.DarkRed;
+            this.passengerMenuStrp.Dock = System.Windows.Forms.DockStyle.Left;
+            this.passengerMenuStrp.Font = new System.Drawing.Font("Lucida Bright", 10F);
+            this.passengerMenuStrp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.personalToolStripMenuItem,
+            this.bookToolStripMenuItem,
+            this.requestToolStripMenuItem,
+            this.myFlightsToolStripMenuItem,
+            this.cancelToolStripMenuItem,
+            this.aboutToolStripMenuItem,
+            this.contactUsToolStripMenuItem,
+            this.updatePersonalDetailsToolStripMenuItem});
+            this.passengerMenuStrp.Location = new System.Drawing.Point(0, 0);
+            this.passengerMenuStrp.Name = "passengerMenuStrp";
+            this.passengerMenuStrp.Size = new System.Drawing.Size(138, 450);
+            this.passengerMenuStrp.TabIndex = 24;
+            this.passengerMenuStrp.Text = "menuStrip1";
             // 
-            // lblEmail
+            // personalToolStripMenuItem
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(162, 209);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(51, 17);
-            this.lblEmail.TabIndex = 57;
-            this.lblEmail.Text = "E-Mail:";
+            this.personalToolStripMenuItem.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold);
+            this.personalToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.personalToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5);
+            this.personalToolStripMenuItem.Name = "personalToolStripMenuItem";
+            this.personalToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
+            this.personalToolStripMenuItem.Size = new System.Drawing.Size(121, 30);
+            this.personalToolStripMenuItem.Text = "Personal Details";
             // 
-            // txtEmail
+            // bookToolStripMenuItem
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(226, 191);
-            this.txtEmail.Multiline = true;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(281, 35);
-            this.txtEmail.TabIndex = 56;
+            this.bookToolStripMenuItem.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold);
+            this.bookToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.bookToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5);
+            this.bookToolStripMenuItem.Name = "bookToolStripMenuItem";
+            this.bookToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
+            this.bookToolStripMenuItem.Size = new System.Drawing.Size(121, 30);
+            this.bookToolStripMenuItem.Text = "Book a Flight";
             // 
-            // mskdtxtbxCnic
+            // requestToolStripMenuItem
             // 
-            this.mskdtxtbxCnic.Location = new System.Drawing.Point(226, 242);
-            this.mskdtxtbxCnic.Mask = "00000-0000000-0";
-            this.mskdtxtbxCnic.Name = "mskdtxtbxCnic";
-            this.mskdtxtbxCnic.Size = new System.Drawing.Size(281, 20);
-            this.mskdtxtbxCnic.TabIndex = 55;
+            this.requestToolStripMenuItem.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold);
+            this.requestToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.requestToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5);
+            this.requestToolStripMenuItem.Name = "requestToolStripMenuItem";
+            this.requestToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
+            this.requestToolStripMenuItem.Size = new System.Drawing.Size(121, 30);
+            this.requestToolStripMenuItem.Text = "Request a Flight";
             // 
-            // lblContact
+            // myFlightsToolStripMenuItem
             // 
-            this.lblContact.AutoSize = true;
-            this.lblContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContact.Location = new System.Drawing.Point(131, 282);
-            this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(82, 17);
-            this.lblContact.TabIndex = 54;
-            this.lblContact.Text = "Contact No:";
+            this.myFlightsToolStripMenuItem.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold);
+            this.myFlightsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.myFlightsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5);
+            this.myFlightsToolStripMenuItem.Name = "myFlightsToolStripMenuItem";
+            this.myFlightsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
+            this.myFlightsToolStripMenuItem.Size = new System.Drawing.Size(121, 30);
+            this.myFlightsToolStripMenuItem.Text = "My Flights";
             // 
-            // lblCNIC
+            // cancelToolStripMenuItem
             // 
-            this.lblCNIC.AutoSize = true;
-            this.lblCNIC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCNIC.Location = new System.Drawing.Point(148, 249);
-            this.lblCNIC.Name = "lblCNIC";
-            this.lblCNIC.Size = new System.Drawing.Size(65, 17);
-            this.lblCNIC.TabIndex = 53;
-            this.lblCNIC.Text = "CNIC No:";
+            this.cancelToolStripMenuItem.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold);
+            this.cancelToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.cancelToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5);
+            this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
+            this.cancelToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(121, 30);
+            this.cancelToolStripMenuItem.Text = "Cancel a Flight";
             // 
-            // txtPassport
+            // aboutToolStripMenuItem
             // 
-            this.txtPassport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassport.Location = new System.Drawing.Point(226, 145);
-            this.txtPassport.Multiline = true;
-            this.txtPassport.Name = "txtPassport";
-            this.txtPassport.Size = new System.Drawing.Size(281, 35);
-            this.txtPassport.TabIndex = 52;
+            this.aboutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.aboutToolStripMenuItem.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold);
+            this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.aboutToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5, 5, 5, 15);
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
+            this.aboutToolStripMenuItem.Text = "About";
             // 
-            // txtName
+            // contactUsToolStripMenuItem
             // 
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(226, 103);
-            this.txtName.Multiline = true;
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(281, 35);
-            this.txtName.TabIndex = 51;
+            this.contactUsToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.contactUsToolStripMenuItem.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold);
+            this.contactUsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.contactUsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.contactUsToolStripMenuItem.Name = "contactUsToolStripMenuItem";
+            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
+            this.contactUsToolStripMenuItem.Text = "Contact Us";
             // 
-            // cmbxGender
+            // updatePersonalDetailsToolStripMenuItem
             // 
-            this.cmbxGender.FormattingEnabled = true;
-            this.cmbxGender.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Rather Not Say"});
-            this.cmbxGender.Location = new System.Drawing.Point(226, 320);
-            this.cmbxGender.Name = "cmbxGender";
-            this.cmbxGender.Size = new System.Drawing.Size(121, 21);
-            this.cmbxGender.TabIndex = 50;
+            this.updatePersonalDetailsToolStripMenuItem.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold);
+            this.updatePersonalDetailsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.updatePersonalDetailsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.updatePersonalDetailsToolStripMenuItem.Name = "updatePersonalDetailsToolStripMenuItem";
+            this.updatePersonalDetailsToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
+            this.updatePersonalDetailsToolStripMenuItem.Text = "Update Personal Details";
             // 
-            // lblGender
+            // btnLogOut
             // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(148, 324);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(60, 17);
-            this.lblGender.TabIndex = 49;
-            this.lblGender.Text = "Gender:";
-            // 
-            // lblPassport
-            // 
-            this.lblPassport.AutoSize = true;
-            this.lblPassport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassport.Location = new System.Drawing.Point(123, 161);
-            this.lblPassport.Name = "lblPassport";
-            this.lblPassport.Size = new System.Drawing.Size(90, 17);
-            this.lblPassport.TabIndex = 48;
-            this.lblPassport.Text = "Passport No:";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(159, 121);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(49, 17);
-            this.lblName.TabIndex = 47;
-            this.lblName.Text = "Name:";
-            // 
-            // lblMainHeading
-            // 
-            this.lblMainHeading.AutoSize = true;
-            this.lblMainHeading.Font = new System.Drawing.Font("Trebuchet MS", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lblMainHeading.Location = new System.Drawing.Point(175, 32);
-            this.lblMainHeading.Name = "lblMainHeading";
-            this.lblMainHeading.Size = new System.Drawing.Size(399, 40);
-            this.lblMainHeading.TabIndex = 46;
-            this.lblMainHeading.Text = "Enter Your Personal Details";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(634, 391);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(87, 27);
-            this.btnSave.TabIndex = 45;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(80, 391);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(87, 27);
-            this.btnBack.TabIndex = 44;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnLogOut.Location = new System.Drawing.Point(719, 12);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(75, 23);
+            this.btnLogOut.TabIndex = 25;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.UseVisualStyleBackColor = true;
             // 
             // HelpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.mskdtxtbxContact);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.mskdtxtbxCnic);
-            this.Controls.Add(this.lblContact);
-            this.Controls.Add(this.lblCNIC);
-            this.Controls.Add(this.txtPassport);
-            this.Controls.Add(this.txtName);
-            this.Controls.Add(this.cmbxGender);
-            this.Controls.Add(this.lblGender);
-            this.Controls.Add(this.lblPassport);
-            this.Controls.Add(this.lblName);
-            this.Controls.Add(this.lblMainHeading);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.passengerMenuStrp);
+            this.Controls.Add(this.btnLogOut);
             this.Name = "HelpForm";
             this.Text = "HelpForm";
+            this.passengerMenuStrp.ResumeLayout(false);
+            this.passengerMenuStrp.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MaskedTextBox mskdtxtbxContact;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.MaskedTextBox mskdtxtbxCnic;
-        private System.Windows.Forms.Label lblContact;
-        private System.Windows.Forms.Label lblCNIC;
-        private System.Windows.Forms.TextBox txtPassport;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.ComboBox cmbxGender;
-        private System.Windows.Forms.Label lblGender;
-        private System.Windows.Forms.Label lblPassport;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblMainHeading;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.MenuStrip passengerMenuStrp;
+        private System.Windows.Forms.ToolStripMenuItem personalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bookToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem requestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem myFlightsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contactUsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updatePersonalDetailsToolStripMenuItem;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }

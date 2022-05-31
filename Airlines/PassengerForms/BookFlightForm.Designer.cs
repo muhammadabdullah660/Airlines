@@ -30,8 +30,8 @@ namespace Airlines.PassengerForms
         private void InitializeComponent ()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblMainHeading = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblDeptCity = new System.Windows.Forms.Label();
             this.cmbxDepartCity = new System.Windows.Forms.ComboBox();
             this.lblArrCity = new System.Windows.Forms.Label();
@@ -48,8 +48,8 @@ namespace Airlines.PassengerForms
             this.numUpDnInfant = new System.Windows.Forms.NumericUpDown();
             this.cmbxClass = new System.Windows.Forms.ComboBox();
             this.lblClass = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDnAdult)).BeginInit();
@@ -71,6 +71,20 @@ namespace Airlines.PassengerForms
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 100);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // lblMainHeading
+            // 
+            this.lblMainHeading.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.lblMainHeading, 2);
+            this.lblMainHeading.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblMainHeading.Font = new System.Drawing.Font("Trebuchet MS", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblMainHeading.Location = new System.Drawing.Point(3, 0);
+            this.lblMainHeading.Name = "lblMainHeading";
+            this.tableLayoutPanel1.SetRowSpan(this.lblMainHeading, 2);
+            this.lblMainHeading.Size = new System.Drawing.Size(794, 100);
+            this.lblMainHeading.TabIndex = 75;
+            this.lblMainHeading.Text = "Book a Flight";
+            this.lblMainHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2
             // 
@@ -119,20 +133,6 @@ namespace Airlines.PassengerForms
             this.tableLayoutPanel2.Size = new System.Drawing.Size(800, 350);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
-            // lblMainHeading
-            // 
-            this.lblMainHeading.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.lblMainHeading, 2);
-            this.lblMainHeading.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblMainHeading.Font = new System.Drawing.Font("Trebuchet MS", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lblMainHeading.Location = new System.Drawing.Point(3, 0);
-            this.lblMainHeading.Name = "lblMainHeading";
-            this.tableLayoutPanel1.SetRowSpan(this.lblMainHeading, 2);
-            this.lblMainHeading.Size = new System.Drawing.Size(794, 100);
-            this.lblMainHeading.TabIndex = 75;
-            this.lblMainHeading.Text = "Book a Flight";
-            this.lblMainHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lblDeptCity
             // 
             this.lblDeptCity.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -154,6 +154,7 @@ namespace Airlines.PassengerForms
             this.cmbxDepartCity.Name = "cmbxDepartCity";
             this.cmbxDepartCity.Size = new System.Drawing.Size(121, 21);
             this.cmbxDepartCity.TabIndex = 78;
+            this.cmbxDepartCity.TextChanged += new System.EventHandler(this.cmbxDepartCity_SelectedIndexChanged);
             // 
             // lblArrCity
             // 
@@ -174,6 +175,7 @@ namespace Airlines.PassengerForms
             this.cmbxArrCity.Name = "cmbxArrCity";
             this.cmbxArrCity.Size = new System.Drawing.Size(121, 21);
             this.cmbxArrCity.TabIndex = 82;
+            this.cmbxArrCity.TextChanged += new System.EventHandler(this.cmbxArrCity_SelectedIndexChanged);
             // 
             // lblTrip
             // 
@@ -196,6 +198,7 @@ namespace Airlines.PassengerForms
             this.cmbxTripType.Name = "cmbxTripType";
             this.cmbxTripType.Size = new System.Drawing.Size(121, 21);
             this.cmbxTripType.TabIndex = 84;
+            this.cmbxTripType.TextChanged += new System.EventHandler(this.cmbxTripType_SelectedIndexChanged);
             // 
             // lblDeptDate
             // 
@@ -291,16 +294,6 @@ namespace Airlines.PassengerForms
             this.lblClass.TabIndex = 96;
             this.lblClass.Text = "Flight Class:";
             // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(3, 307);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(87, 27);
-            this.btnSave.TabIndex = 97;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
             // btnBack
             // 
             this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -311,6 +304,18 @@ namespace Airlines.PassengerForms
             this.btnBack.TabIndex = 98;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(3, 307);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(87, 27);
+            this.btnSave.TabIndex = 97;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // BookFlightForm
             // 
@@ -319,7 +324,6 @@ namespace Airlines.PassengerForms
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "BookFlightForm";
             this.Text = "BookFlightForm";
             this.Load += new System.EventHandler(this.BookFlightForm_Load);

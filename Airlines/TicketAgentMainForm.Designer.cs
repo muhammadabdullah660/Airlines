@@ -33,11 +33,10 @@ namespace Airlines
             this.ticketagentMenuStrp = new System.Windows.Forms.MenuStrip();
             this.passengersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.travelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orderedPassengersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.requestedFlightsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ticketagentMenuStrp.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,16 +47,15 @@ namespace Airlines
             this.ticketagentMenuStrp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.passengersToolStripMenuItem,
             this.flightToolStripMenuItem,
-            this.aboutToolStripMenuItem,
             this.orderedPassengersToolStripMenuItem,
-            this.requestedFlightsToolStripMenuItem});
+            this.requestedFlightsToolStripMenuItem,
+            this.logOutToolStripMenuItem});
             this.ticketagentMenuStrp.Name = "ticketagentMenuStrp";
             // 
             // passengersToolStripMenuItem
             // 
             this.passengersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.personalToolStripMenuItem1,
-            this.travelToolStripMenuItem});
+            this.personalToolStripMenuItem1});
             resources.ApplyResources(this.passengersToolStripMenuItem, "passengersToolStripMenuItem");
             this.passengersToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.passengersToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5);
@@ -71,11 +69,6 @@ namespace Airlines
             resources.ApplyResources(this.personalToolStripMenuItem1, "personalToolStripMenuItem1");
             this.personalToolStripMenuItem1.Click += new System.EventHandler(this.personalToolStripMenuItem1_Click);
             // 
-            // travelToolStripMenuItem
-            // 
-            this.travelToolStripMenuItem.Name = "travelToolStripMenuItem";
-            resources.ApplyResources(this.travelToolStripMenuItem, "travelToolStripMenuItem");
-            // 
             // flightToolStripMenuItem
             // 
             resources.ApplyResources(this.flightToolStripMenuItem, "flightToolStripMenuItem");
@@ -84,14 +77,6 @@ namespace Airlines
             this.flightToolStripMenuItem.Name = "flightToolStripMenuItem";
             this.flightToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
             this.flightToolStripMenuItem.Click += new System.EventHandler(this.flightStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
-            this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.aboutToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             // 
             // orderedPassengersToolStripMenuItem
             // 
@@ -106,6 +91,14 @@ namespace Airlines
             this.requestedFlightsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.requestedFlightsToolStripMenuItem.Name = "requestedFlightsToolStripMenuItem";
             this.requestedFlightsToolStripMenuItem.Click += new System.EventHandler(this.requestedFlightsToolStripMenuItem_Click);
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.logOutToolStripMenuItem, "logOutToolStripMenuItem");
+            this.logOutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // TicketAgentMainForm
             // 
@@ -126,10 +119,9 @@ namespace Airlines
         private System.Windows.Forms.MenuStrip ticketagentMenuStrp;
         private System.Windows.Forms.ToolStripMenuItem passengersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem flightToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personalToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem travelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orderedPassengersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem requestedFlightsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
     }
 }

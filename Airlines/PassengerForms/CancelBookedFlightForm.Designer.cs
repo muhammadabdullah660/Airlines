@@ -30,10 +30,10 @@ namespace Airlines.PassengerForms
         private void InitializeComponent ()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.gvFlights = new System.Windows.Forms.DataGridView();
             this.Cancel = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnBack = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvFlights)).BeginInit();
@@ -53,6 +53,17 @@ namespace Airlines.PassengerForms
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 100);
             this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnBack.Location = new System.Drawing.Point(3, 3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 44);
+            this.btnBack.TabIndex = 2;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -78,26 +89,19 @@ namespace Airlines.PassengerForms
             this.gvFlights.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvFlights.Location = new System.Drawing.Point(3, 3);
             this.gvFlights.Name = "gvFlights";
+            this.gvFlights.ReadOnly = true;
             this.tableLayoutPanel2.SetRowSpan(this.gvFlights, 2);
             this.gvFlights.Size = new System.Drawing.Size(794, 344);
             this.gvFlights.TabIndex = 3;
+            this.gvFlights.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvFlights_CellContentClick);
             // 
             // Cancel
             // 
             this.Cancel.HeaderText = "Cancel";
             this.Cancel.Name = "Cancel";
+            this.Cancel.ReadOnly = true;
             this.Cancel.Text = "Cancel";
             this.Cancel.UseColumnTextForButtonValue = true;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnBack.Location = new System.Drawing.Point(3, 3);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 44);
-            this.btnBack.TabIndex = 2;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
             // 
             // CancelBookedFlightForm
             // 

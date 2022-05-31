@@ -53,25 +53,10 @@ namespace Airlines
             Form signUpForm = new SignUp();
             signUpForm.Show();
         }
-
-        private void tableLayoutPanel2_Paint (object sender , PaintEventArgs e)
+        private void aboutToolStripMenuItem_Click (object sender , EventArgs e)
         {
-
-        }
-
-        private void flowLayoutPanel1_Paint (object sender , PaintEventArgs e)
-        {
-
-        }
-
-        private void menuStrpMain_ItemClicked (object sender , ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint (object sender , PaintEventArgs e)
-        {
-
+            AboutForm f = new AboutForm();
+            f.Show();
         }
     }
 }

@@ -251,6 +251,7 @@ namespace Airlines.PassengerForms
             this.btnSave.TabIndex = 67;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnBack
             // 
@@ -261,6 +262,7 @@ namespace Airlines.PassengerForms
             this.btnBack.TabIndex = 68;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // PersonalDetails
             // 

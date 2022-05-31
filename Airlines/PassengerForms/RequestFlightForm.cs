@@ -24,7 +24,7 @@ namespace Airlines.PassengerForms
 
         }
 
-        private void btnSave_Click (object sender , EventArgs e)
+        private void btnRequest_Click (object sender , EventArgs e)
         {
             Flight reqFlight = new Flight(txtDept.Text , txtArr.Text , cmbxTripType.Text , dateTimePicker1.Value);
             FlightDL.addReqFlightIntoList(reqFlight);

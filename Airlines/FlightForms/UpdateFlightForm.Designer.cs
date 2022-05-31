@@ -58,24 +58,27 @@ namespace Airlines.FlightForms
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(3, 307);
+            this.btnSave.Location = new System.Drawing.Point(710, 313);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(87, 27);
             this.btnSave.TabIndex = 99;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(710, 307);
+            this.btnBack.Location = new System.Drawing.Point(3, 313);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(87, 27);
             this.btnBack.TabIndex = 98;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // txtDept
             // 
@@ -138,8 +141,6 @@ namespace Airlines.FlightForms
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.btnSave, 0, 8);
-            this.tableLayoutPanel2.Controls.Add(this.btnBack, 0, 8);
             this.tableLayoutPanel2.Controls.Add(this.txtDept, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblDeptCity, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblArrCity, 0, 1);
@@ -156,6 +157,8 @@ namespace Airlines.FlightForms
             this.tableLayoutPanel2.Controls.Add(this.lblSeats, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.lblClass, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.cmbxClass, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.btnSave, 1, 8);
+            this.tableLayoutPanel2.Controls.Add(this.btnBack, 0, 8);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 100);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";

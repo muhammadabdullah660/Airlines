@@ -32,8 +32,6 @@ namespace Airlines
             bookForm.Show();
         }
 
-
-
         private void personalToolStripMenuItem_Click (object sender , EventArgs e)
         {
             PersonalDetails pDForm = new PersonalDetails(p);
@@ -58,10 +56,6 @@ namespace Airlines
             cancelBookedFlight.Show();
         }
 
-        private void passengerMenuStrp_ItemClicked (object sender , ToolStripItemClickedEventArgs e)
-        {
-
-        }
 
         private void updatePersonalDetailsToolStripMenuItem_Click (object sender , EventArgs e)
         {
