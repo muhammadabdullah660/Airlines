@@ -29,7 +29,6 @@ namespace Airlines.PassengerForms
         /// </summary>
         private void InitializeComponent ()
         {
-            this.mskdtxtbxDate = new System.Windows.Forms.MaskedTextBox();
             this.cmbxTripType = new System.Windows.Forms.ComboBox();
             this.lblTrip = new System.Windows.Forms.Label();
             this.lblDeptDate = new System.Windows.Forms.Label();
@@ -40,16 +39,8 @@ namespace Airlines.PassengerForms
             this.btnBack = new System.Windows.Forms.Button();
             this.txtDept = new System.Windows.Forms.TextBox();
             this.txtArr = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
-            // 
-            // mskdtxtbxDate
-            // 
-            this.mskdtxtbxDate.Location = new System.Drawing.Point(290, 235);
-            this.mskdtxtbxDate.Mask = "00/00/0000";
-            this.mskdtxtbxDate.Name = "mskdtxtbxDate";
-            this.mskdtxtbxDate.Size = new System.Drawing.Size(121, 20);
-            this.mskdtxtbxDate.TabIndex = 82;
-            this.mskdtxtbxDate.ValidatingType = typeof(System.DateTime);
             // 
             // cmbxTripType
             // 
@@ -150,14 +141,21 @@ namespace Airlines.PassengerForms
             this.txtArr.Size = new System.Drawing.Size(121, 35);
             this.txtArr.TabIndex = 84;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(290, 236);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 85;
+            // 
             // RequestFlightForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtArr);
             this.Controls.Add(this.txtDept);
-            this.Controls.Add(this.mskdtxtbxDate);
             this.Controls.Add(this.cmbxTripType);
             this.Controls.Add(this.lblTrip);
             this.Controls.Add(this.lblDeptDate);
@@ -175,8 +173,6 @@ namespace Airlines.PassengerForms
         }
 
         #endregion
-
-        private System.Windows.Forms.MaskedTextBox mskdtxtbxDate;
         private System.Windows.Forms.ComboBox cmbxTripType;
         private System.Windows.Forms.Label lblTrip;
         private System.Windows.Forms.Label lblDeptDate;
@@ -187,5 +183,6 @@ namespace Airlines.PassengerForms
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox txtDept;
         private System.Windows.Forms.TextBox txtArr;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

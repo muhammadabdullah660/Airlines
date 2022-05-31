@@ -14,9 +14,6 @@ namespace Airlines.BL
         private string eMail;
         private string gender;
         private string contactNum;
-        private int adult;
-        private int child;
-        private int infant;
         private List<Flight> myFlights = new List<Flight>();
         private double total;
         public Passenger (string userName , string userPassword , string userRole , string name , string passportNo , string cnic , string eMail , string gender , string contactNum) : base(userName , userPassword , userRole)
@@ -43,9 +40,6 @@ namespace Airlines.BL
         public string EMail { get => eMail; set => eMail = value; }
         public string Gender { get => gender; set => gender = value; }
         public string ContactNum { get => contactNum; set => contactNum = value; }
-        public int Adult { get => adult; set => adult = value; }
-        public int Child { get => child; set => child = value; }
-        public int Infant { get => infant; set => infant = value; }
         internal List<Flight> MyFlights { get => myFlights; set => myFlights = value; }
         public double Total { get => total; set => total = value; }
 
@@ -54,7 +48,7 @@ namespace Airlines.BL
             int index = MyFlights.FindIndex(item => item == myFlight);
             MyFlights.RemoveAt(index);
         }
-        public double calculatePrice (Flight item , Flight myFlight)
+        public double calculatePrice (Flight item , Flight myFlight , int Adult , int Child , int Infant)
         {
             double x = ((Adult * item.Price) + (Child * (item.Price)) / 2 + (Infant * (item.Price) / 4));
             x += myFlight.Seats * checkClass(myFlight);
@@ -64,9 +58,9 @@ namespace Airlines.BL
         {
             if (myFlight.FlightClass == "Business")
             {
-                return 10000;
+                return myFlight.Price * 10;
             }
-            return 0;
+            return 1;
         }
         public void calculateTotal ()
         {

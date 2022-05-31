@@ -11,12 +11,12 @@ namespace Airlines.BL
         private string departCity;
         private string arrCity;
         private string tripType;
-        private string departDate;
+        private DateTime departDate;
         private string departTime;
         private int seats;
         private double price;
         private string flightClass;
-        public Flight (string departCity , string arrCity , string tripType , string departDate , string departTime , int seats , int price , string flightClass)
+        public Flight (string departCity , string arrCity , string tripType , DateTime departDate , string departTime , int seats , double price , string flightClass)
         {
             this.DepartCity = departCity;
             this.ArrCity = arrCity;
@@ -27,7 +27,7 @@ namespace Airlines.BL
             this.Price = price;
             this.flightClass = flightClass;
         }
-        public Flight (string departCity , string arrCity , string tripType , string departDate)
+        public Flight (string departCity , string arrCity , string tripType , DateTime departDate)
         {
             this.DepartCity = departCity;
             this.ArrCity = arrCity;
@@ -38,10 +38,10 @@ namespace Airlines.BL
         public string DepartCity { get => departCity; set => departCity = value; }
         public string ArrCity { get => arrCity; set => arrCity = value; }
         public string TripType { get => tripType; set => tripType = value; }
-        public string DepartDate { get => departDate; set => departDate = value; }
         public string DepartTime { get => departTime; set => departTime = value; }
         public int Seats { get => seats; set => seats = value; }
         public double Price { get => price; set => price = value; }
         public string FlightClass { get => flightClass; set => flightClass = value; }
+        public DateTime DepartDate { get => departDate; set => departDate = value; }
     }
 }

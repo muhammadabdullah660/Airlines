@@ -60,8 +60,8 @@ namespace Airlines
             //MessageBox.Show(userX.UserName);
             if (!userX.isAdmin())
             {
-                Passenger p = PassengerDL.isValidPassenger(userX);
-                PassengerMainForm pass = new PassengerMainForm(p);
+                //Passenger p = PassengerDL.isValidPassenger(userX);
+                PassengerMainForm pass = new PassengerMainForm(PassengerDL.isValidPassenger(userX));
                 pass.Show();
 
             }

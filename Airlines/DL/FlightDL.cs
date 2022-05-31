@@ -77,7 +77,7 @@ namespace Airlines.DL
                     string departCity = splittedRecord[0];
                     string arrCity = (splittedRecord[1]);
                     string tripType = (splittedRecord[2]);
-                    string departDate = splittedRecord[3];
+                    DateTime departDate = DateTime.Parse(splittedRecord[3]);
                     string departTime = (splittedRecord[4]);
                     int seats = int.Parse(splittedRecord[5]);
                     int price = int.Parse(splittedRecord[6]);
@@ -94,7 +94,7 @@ namespace Airlines.DL
                     string departCity = splittedRecord[0];
                     string arrCity = (splittedRecord[1]);
                     string tripType = (splittedRecord[2]);
-                    string departDate = splittedRecord[3];
+                    DateTime departDate = DateTime.Parse(splittedRecord[3]);
                     string departTime = (splittedRecord[4]);
                     int seats = int.Parse(splittedRecord[5]);
                     int price = int.Parse(splittedRecord[6]);
@@ -112,6 +112,14 @@ namespace Airlines.DL
             }
         }
         public static void storeIntoFile (string path , Flight newFlight)
+        {
+
+            StreamWriter f = new StreamWriter(path , true);
+            f.WriteLine(newFlight.DepartCity + "," + newFlight.ArrCity + "," + newFlight.TripType + "," + newFlight.DepartDate + "," + newFlight.DepartTime + "," + newFlight.Seats + "," + newFlight.Price + "," + newFlight.FlightClass);
+            f.Flush();
+            f.Close();
+        }
+        public static void storeReqFlightsIntoFile (string path , Flight newFlight)
         {
 
             StreamWriter f = new StreamWriter(path , true);

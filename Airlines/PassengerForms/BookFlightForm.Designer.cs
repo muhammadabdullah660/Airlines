@@ -39,15 +39,18 @@ namespace Airlines.PassengerForms
             this.btnBack = new System.Windows.Forms.Button();
             this.cmbxTripType = new System.Windows.Forms.ComboBox();
             this.cmbxArrCity = new System.Windows.Forms.ComboBox();
-            this.mskdtxtbxAdult = new System.Windows.Forms.MaskedTextBox();
             this.lblAdult = new System.Windows.Forms.Label();
             this.lblInfant = new System.Windows.Forms.Label();
             this.lblChild = new System.Windows.Forms.Label();
-            this.mskdtxtbxInfant = new System.Windows.Forms.MaskedTextBox();
-            this.mskdtxtbxChild = new System.Windows.Forms.MaskedTextBox();
-            this.mskdtxtbxDate = new System.Windows.Forms.MaskedTextBox();
             this.lblClass = new System.Windows.Forms.Label();
             this.cmbxClass = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.numUpDnAdult = new System.Windows.Forms.NumericUpDown();
+            this.numUpDnInfant = new System.Windows.Forms.NumericUpDown();
+            this.numUpDnChild = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDnAdult)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDnInfant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDnChild)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTrip
@@ -74,6 +77,8 @@ namespace Airlines.PassengerForms
             // 
             this.cmbxDepartCity.DisplayMember = "DepartCity";
             this.cmbxDepartCity.FormattingEnabled = true;
+            this.cmbxDepartCity.Items.AddRange(new object[] {
+            " "});
             this.cmbxDepartCity.Location = new System.Drawing.Point(290, 62);
             this.cmbxDepartCity.Name = "cmbxDepartCity";
             this.cmbxDepartCity.Size = new System.Drawing.Size(121, 21);
@@ -142,6 +147,7 @@ namespace Airlines.PassengerForms
             this.cmbxTripType.Name = "cmbxTripType";
             this.cmbxTripType.Size = new System.Drawing.Size(121, 21);
             this.cmbxTripType.TabIndex = 56;
+            this.cmbxTripType.SelectedIndexChanged += new System.EventHandler(this.cmbxTripType_SelectedIndexChanged);
             // 
             // cmbxArrCity
             // 
@@ -151,15 +157,7 @@ namespace Airlines.PassengerForms
             this.cmbxArrCity.Name = "cmbxArrCity";
             this.cmbxArrCity.Size = new System.Drawing.Size(121, 21);
             this.cmbxArrCity.TabIndex = 57;
-            // 
-            // mskdtxtbxAdult
-            // 
-            this.mskdtxtbxAdult.Location = new System.Drawing.Point(290, 223);
-            this.mskdtxtbxAdult.Mask = "00000";
-            this.mskdtxtbxAdult.Name = "mskdtxtbxAdult";
-            this.mskdtxtbxAdult.Size = new System.Drawing.Size(121, 20);
-            this.mskdtxtbxAdult.TabIndex = 59;
-            this.mskdtxtbxAdult.ValidatingType = typeof(int);
+            this.cmbxArrCity.TextChanged += new System.EventHandler(this.cmbxArrCity_SelectedIndexChanged);
             // 
             // lblAdult
             // 
@@ -191,34 +189,6 @@ namespace Airlines.PassengerForms
             this.lblChild.TabIndex = 62;
             this.lblChild.Text = "Child:";
             // 
-            // mskdtxtbxInfant
-            // 
-            this.mskdtxtbxInfant.Location = new System.Drawing.Point(290, 294);
-            this.mskdtxtbxInfant.Mask = "00000";
-            this.mskdtxtbxInfant.Name = "mskdtxtbxInfant";
-            this.mskdtxtbxInfant.Size = new System.Drawing.Size(121, 20);
-            this.mskdtxtbxInfant.TabIndex = 63;
-            this.mskdtxtbxInfant.ValidatingType = typeof(int);
-            // 
-            // mskdtxtbxChild
-            // 
-            this.mskdtxtbxChild.Location = new System.Drawing.Point(290, 260);
-            this.mskdtxtbxChild.Mask = "00000";
-            this.mskdtxtbxChild.Name = "mskdtxtbxChild";
-            this.mskdtxtbxChild.Size = new System.Drawing.Size(121, 20);
-            this.mskdtxtbxChild.TabIndex = 64;
-            this.mskdtxtbxChild.ValidatingType = typeof(int);
-            // 
-            // mskdtxtbxDate
-            // 
-            this.mskdtxtbxDate.Location = new System.Drawing.Point(290, 184);
-            this.mskdtxtbxDate.Mask = "00/00/0000";
-            this.mskdtxtbxDate.Name = "mskdtxtbxDate";
-            this.mskdtxtbxDate.Size = new System.Drawing.Size(121, 20);
-            this.mskdtxtbxDate.TabIndex = 65;
-            this.mskdtxtbxDate.ValidatingType = typeof(System.DateTime);
-            this.mskdtxtbxDate.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskdtxtbxDate_MaskInputRejected);
-            // 
             // lblClass
             // 
             this.lblClass.AutoSize = true;
@@ -240,20 +210,48 @@ namespace Airlines.PassengerForms
             this.cmbxClass.Size = new System.Drawing.Size(101, 21);
             this.cmbxClass.TabIndex = 66;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(290, 185);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 68;
+            // 
+            // numUpDnAdult
+            // 
+            this.numUpDnAdult.Location = new System.Drawing.Point(291, 224);
+            this.numUpDnAdult.Name = "numUpDnAdult";
+            this.numUpDnAdult.Size = new System.Drawing.Size(120, 20);
+            this.numUpDnAdult.TabIndex = 69;
+            // 
+            // numUpDnInfant
+            // 
+            this.numUpDnInfant.Location = new System.Drawing.Point(291, 292);
+            this.numUpDnInfant.Name = "numUpDnInfant";
+            this.numUpDnInfant.Size = new System.Drawing.Size(120, 20);
+            this.numUpDnInfant.TabIndex = 70;
+            // 
+            // numUpDnChild
+            // 
+            this.numUpDnChild.Location = new System.Drawing.Point(290, 260);
+            this.numUpDnChild.Name = "numUpDnChild";
+            this.numUpDnChild.Size = new System.Drawing.Size(120, 20);
+            this.numUpDnChild.TabIndex = 71;
+            // 
             // BookFlightForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.numUpDnChild);
+            this.Controls.Add(this.numUpDnInfant);
+            this.Controls.Add(this.numUpDnAdult);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lblClass);
             this.Controls.Add(this.cmbxClass);
-            this.Controls.Add(this.mskdtxtbxDate);
-            this.Controls.Add(this.mskdtxtbxChild);
-            this.Controls.Add(this.mskdtxtbxInfant);
             this.Controls.Add(this.lblChild);
             this.Controls.Add(this.lblInfant);
             this.Controls.Add(this.lblAdult);
-            this.Controls.Add(this.mskdtxtbxAdult);
             this.Controls.Add(this.cmbxArrCity);
             this.Controls.Add(this.cmbxTripType);
             this.Controls.Add(this.lblTrip);
@@ -267,6 +265,9 @@ namespace Airlines.PassengerForms
             this.Name = "BookFlightForm";
             this.Text = "BookFlightForm";
             this.Load += new System.EventHandler(this.BookFlightForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDnAdult)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDnInfant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDnChild)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,14 +284,14 @@ namespace Airlines.PassengerForms
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.ComboBox cmbxTripType;
         private System.Windows.Forms.ComboBox cmbxArrCity;
-        private System.Windows.Forms.MaskedTextBox mskdtxtbxAdult;
         private System.Windows.Forms.Label lblAdult;
         private System.Windows.Forms.Label lblInfant;
         private System.Windows.Forms.Label lblChild;
-        private System.Windows.Forms.MaskedTextBox mskdtxtbxInfant;
-        private System.Windows.Forms.MaskedTextBox mskdtxtbxChild;
-        private System.Windows.Forms.MaskedTextBox mskdtxtbxDate;
         private System.Windows.Forms.Label lblClass;
         private System.Windows.Forms.ComboBox cmbxClass;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.NumericUpDown numUpDnAdult;
+        private System.Windows.Forms.NumericUpDown numUpDnInfant;
+        private System.Windows.Forms.NumericUpDown numUpDnChild;
     }
 }

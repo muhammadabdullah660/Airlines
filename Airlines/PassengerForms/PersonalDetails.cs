@@ -24,9 +24,9 @@ namespace Airlines.PassengerForms
         private void btnSave_Click (object sender , EventArgs e)
         {
             p.Name = txtName.Text;
-            p.Cnic = txtCNIC.Text;
+            p.Cnic = mskdtxtbxCnic.Text;
             p.PassportNo = txtPassport.Text;
-            p.ContactNum = txtContact.Text;
+            p.ContactNum = mskdtxtbxContact.Text;
             p.Gender = cmbxGender.Text;
             p.EMail = txtEmail.Text;
             MessageBox.Show("Details Saved");

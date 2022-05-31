@@ -28,6 +28,7 @@ namespace Airlines.TicketAgentForms
             Flight newFlight = (Flight)gvFlights.CurrentRow.DataBoundItem;
             if (gvFlights.Columns["Add"].Index == e.ColumnIndex)
             {
+                FlightDL.addFlightIntoList(newFlight);
                 UpdateFlightForm newForm = new UpdateFlightForm(newFlight);
                 newForm.ShowDialog();
                 FlightDL.deleteRequestedFlight(newFlight);

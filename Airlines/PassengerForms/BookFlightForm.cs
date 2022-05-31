@@ -28,17 +28,17 @@ namespace Airlines.PassengerForms
 
         private void btnSave_Click (object sender , EventArgs e)
         {
-            Flight myFlight = new Flight(cmbxDepartCity.Text , cmbxArrCity.Text , cmbxTripType.Text , mskdtxtbxDate.Text);
+            Flight myFlight = new Flight(cmbxDepartCity.Text , cmbxArrCity.Text , cmbxTripType.Text , dateTimePicker1.Value);
             Flight item = FlightDL.checkFlight(myFlight);
             if (item != null)
             {
-                p.Adult = int.Parse(mskdtxtbxAdult.Text);
-                p.Child = int.Parse(mskdtxtbxChild.Text);
-                p.Infant = int.Parse(mskdtxtbxInfant.Text);
-
-                myFlight.Seats = p.Adult + p.Child + p.Infant;
+                int Adult = Convert.ToInt32(Math.Round(numUpDnAdult.Value , 0));
+                int Child = Convert.ToInt32(Math.Round(numUpDnChild.Value , 0));
+                int Infant = Convert.ToInt32(Math.Round(numUpDnInfant.Value , 0));
+                myFlight.DepartTime = item.DepartTime;
+                myFlight.Seats = Adult + Child + Infant;
                 myFlight.FlightClass = cmbxClass.Text;
-                double x = p.calculatePrice(item , myFlight);
+                double x = p.calculatePrice(item , myFlight , Adult , Child , Infant);
                 myFlight.Price = x;
                 p.bookFlight(myFlight);
             }
@@ -54,6 +54,15 @@ namespace Airlines.PassengerForms
         private void cmbxDepartCity_SelectedIndexChanged (object sender , EventArgs e)
         {
             cmbxArrCity.DataSource = FlightDL.FlightsList.Where(x => x.DepartCity == cmbxDepartCity.Text).Select(x => x.ArrCity).Distinct().ToList();
+            cmbxTripType.DataSource = FlightDL.FlightsList.Where(x => x.DepartCity == cmbxDepartCity.Text && x.ArrCity == cmbxArrCity.Text).Select(x => x.TripType).Distinct().ToList();
+        }
+        private void cmbxArrCity_SelectedIndexChanged (object sender , EventArgs e)
+        {
+            cmbxTripType.DataSource = FlightDL.FlightsList.Where(x => x.DepartCity == cmbxDepartCity.Text && x.ArrCity == cmbxArrCity.Text).Select(x => x.TripType).Distinct().ToList();
+        }
+        private void cmbxTripType_SelectedIndexChanged (object sender , EventArgs e)
+        {
+            dateTimePicker1.Value = FlightDL.FlightsList.Where(x => x.DepartCity == cmbxDepartCity.Text && x.ArrCity == cmbxArrCity.Text).Select(x => x.DepartDate).First();
         }
         private void combobox (Flight item)
         {
@@ -63,9 +72,7 @@ namespace Airlines.PassengerForms
             }
         }
 
-        private void mskdtxtbxDate_MaskInputRejected (object sender , MaskInputRejectedEventArgs e)
-        {
 
-        }
     }
 }
+

@@ -1,5 +1,3 @@
-a,1,Admin
 abd,123,User
-ali,1,User
-abd,12,User
-x,2,User
+x,1,User
+ali,123,Admin

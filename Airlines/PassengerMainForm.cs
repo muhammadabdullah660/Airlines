@@ -42,7 +42,7 @@ namespace Airlines
 
         private void requestToolStripMenuItem_Click (object sender , EventArgs e)
         {
-            PersonalDetails reqFlightForm = new PersonalDetails(p);
+            RequestFlightForm reqFlightForm = new RequestFlightForm();
             reqFlightForm.Show();
         }
 
@@ -71,7 +71,7 @@ namespace Airlines
 
         private void btnLogOut_Click (object sender , EventArgs e)
         {
-            PassengerDL.storeIntoFile(path , p);
+            PassengerDL.storeAllIntoFile(path);
             this.Close();
         }
     }

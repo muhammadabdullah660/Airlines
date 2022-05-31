@@ -37,13 +37,13 @@ namespace Airlines.PassengerForms
             this.btnSave = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.txtCNIC = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPassport = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
             this.lblCNIC = new System.Windows.Forms.Label();
             this.lblContact = new System.Windows.Forms.Label();
-            this.txtContact = new System.Windows.Forms.TextBox();
+            this.mskdtxtbxCnic = new System.Windows.Forms.MaskedTextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.mskdtxtbxContact = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // cmbxGender
@@ -122,6 +122,7 @@ namespace Airlines.PassengerForms
             // 
             // txtName
             // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(246, 80);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
@@ -129,45 +130,20 @@ namespace Airlines.PassengerForms
             this.txtName.TabIndex = 31;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
-            // txtCNIC
-            // 
-            this.txtCNIC.Location = new System.Drawing.Point(246, 161);
-            this.txtCNIC.Multiline = true;
-            this.txtCNIC.Name = "txtCNIC";
-            this.txtCNIC.Size = new System.Drawing.Size(281, 35);
-            this.txtCNIC.TabIndex = 32;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(246, 202);
-            this.txtEmail.Multiline = true;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(281, 35);
-            this.txtEmail.TabIndex = 33;
-            // 
             // txtPassport
             // 
-            this.txtPassport.Location = new System.Drawing.Point(246, 120);
+            this.txtPassport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassport.Location = new System.Drawing.Point(246, 122);
             this.txtPassport.Multiline = true;
             this.txtPassport.Name = "txtPassport";
             this.txtPassport.Size = new System.Drawing.Size(281, 35);
             this.txtPassport.TabIndex = 34;
             // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(182, 220);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(51, 17);
-            this.lblEmail.TabIndex = 36;
-            this.lblEmail.Text = "E-Mail:";
-            // 
             // lblCNIC
             // 
             this.lblCNIC.AutoSize = true;
             this.lblCNIC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCNIC.Location = new System.Drawing.Point(168, 179);
+            this.lblCNIC.Location = new System.Drawing.Point(168, 226);
             this.lblCNIC.Name = "lblCNIC";
             this.lblCNIC.Size = new System.Drawing.Size(65, 17);
             this.lblCNIC.TabIndex = 37;
@@ -177,32 +153,59 @@ namespace Airlines.PassengerForms
             // 
             this.lblContact.AutoSize = true;
             this.lblContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContact.Location = new System.Drawing.Point(151, 261);
+            this.lblContact.Location = new System.Drawing.Point(151, 259);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(82, 17);
             this.lblContact.TabIndex = 39;
             this.lblContact.Text = "Contact No:";
             // 
-            // txtContact
+            // mskdtxtbxCnic
             // 
-            this.txtContact.Location = new System.Drawing.Point(246, 243);
-            this.txtContact.Multiline = true;
-            this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(281, 35);
-            this.txtContact.TabIndex = 38;
+            this.mskdtxtbxCnic.Location = new System.Drawing.Point(246, 219);
+            this.mskdtxtbxCnic.Mask = "00000-0000000-0";
+            this.mskdtxtbxCnic.Name = "mskdtxtbxCnic";
+            this.mskdtxtbxCnic.Size = new System.Drawing.Size(281, 20);
+            this.mskdtxtbxCnic.TabIndex = 40;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(182, 186);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(51, 17);
+            this.lblEmail.TabIndex = 42;
+            this.lblEmail.Text = "E-Mail:";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(246, 168);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(281, 35);
+            this.txtEmail.TabIndex = 41;
+            // 
+            // mskdtxtbxContact
+            // 
+            this.mskdtxtbxContact.Location = new System.Drawing.Point(246, 259);
+            this.mskdtxtbxContact.Mask = "0000-0000000";
+            this.mskdtxtbxContact.Name = "mskdtxtbxContact";
+            this.mskdtxtbxContact.Size = new System.Drawing.Size(281, 20);
+            this.mskdtxtbxContact.TabIndex = 43;
             // 
             // PersonalDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblContact);
-            this.Controls.Add(this.txtContact);
-            this.Controls.Add(this.lblCNIC);
+            this.Controls.Add(this.mskdtxtbxContact);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.txtPassport);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtCNIC);
+            this.Controls.Add(this.mskdtxtbxCnic);
+            this.Controls.Add(this.lblContact);
+            this.Controls.Add(this.lblCNIC);
+            this.Controls.Add(this.txtPassport);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.cmbxGender);
             this.Controls.Add(this.lblGender);
@@ -229,12 +232,12 @@ namespace Airlines.PassengerForms
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtCNIC;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPassport;
-        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblCNIC;
         private System.Windows.Forms.Label lblContact;
-        private System.Windows.Forms.TextBox txtContact;
+        private System.Windows.Forms.MaskedTextBox mskdtxtbxCnic;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.MaskedTextBox mskdtxtbxContact;
     }
 }

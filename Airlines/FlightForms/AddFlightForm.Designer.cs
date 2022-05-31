@@ -41,13 +41,15 @@ namespace Airlines.FlightForms
             this.txtArr = new System.Windows.Forms.TextBox();
             this.txtDept = new System.Windows.Forms.TextBox();
             this.lblPrice = new System.Windows.Forms.Label();
-            this.mskdtxtbxPrice = new System.Windows.Forms.MaskedTextBox();
             this.mskdtxtbxTime = new System.Windows.Forms.MaskedTextBox();
-            this.mskdtxtbxDate = new System.Windows.Forms.MaskedTextBox();
-            this.mskdtxtbxSeats = new System.Windows.Forms.MaskedTextBox();
             this.lblSeats = new System.Windows.Forms.Label();
             this.lblClass = new System.Windows.Forms.Label();
             this.cmbxClass = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.numUpDnPrice = new System.Windows.Forms.NumericUpDown();
+            this.numUpDnSeats = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDnPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDnSeats)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDeptDate
@@ -169,15 +171,6 @@ namespace Airlines.FlightForms
             this.lblPrice.TabIndex = 58;
             this.lblPrice.Text = "Price:";
             // 
-            // mskdtxtbxPrice
-            // 
-            this.mskdtxtbxPrice.Location = new System.Drawing.Point(226, 170);
-            this.mskdtxtbxPrice.Mask = "00000000";
-            this.mskdtxtbxPrice.Name = "mskdtxtbxPrice";
-            this.mskdtxtbxPrice.Size = new System.Drawing.Size(101, 20);
-            this.mskdtxtbxPrice.TabIndex = 59;
-            this.mskdtxtbxPrice.ValidatingType = typeof(int);
-            // 
             // mskdtxtbxTime
             // 
             this.mskdtxtbxTime.Location = new System.Drawing.Point(226, 213);
@@ -186,24 +179,6 @@ namespace Airlines.FlightForms
             this.mskdtxtbxTime.Size = new System.Drawing.Size(100, 20);
             this.mskdtxtbxTime.TabIndex = 60;
             this.mskdtxtbxTime.ValidatingType = typeof(System.DateTime);
-            // 
-            // mskdtxtbxDate
-            // 
-            this.mskdtxtbxDate.Location = new System.Drawing.Point(227, 257);
-            this.mskdtxtbxDate.Mask = "00/00/0000";
-            this.mskdtxtbxDate.Name = "mskdtxtbxDate";
-            this.mskdtxtbxDate.Size = new System.Drawing.Size(100, 20);
-            this.mskdtxtbxDate.TabIndex = 61;
-            this.mskdtxtbxDate.ValidatingType = typeof(System.DateTime);
-            // 
-            // mskdtxtbxSeats
-            // 
-            this.mskdtxtbxSeats.Location = new System.Drawing.Point(226, 332);
-            this.mskdtxtbxSeats.Mask = "0000";
-            this.mskdtxtbxSeats.Name = "mskdtxtbxSeats";
-            this.mskdtxtbxSeats.Size = new System.Drawing.Size(101, 20);
-            this.mskdtxtbxSeats.TabIndex = 63;
-            this.mskdtxtbxSeats.ValidatingType = typeof(int);
             // 
             // lblSeats
             // 
@@ -237,18 +212,39 @@ namespace Airlines.FlightForms
             this.cmbxClass.Size = new System.Drawing.Size(101, 21);
             this.cmbxClass.TabIndex = 64;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(226, 257);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 66;
+            // 
+            // numUpDnPrice
+            // 
+            this.numUpDnPrice.Location = new System.Drawing.Point(226, 170);
+            this.numUpDnPrice.Name = "numUpDnPrice";
+            this.numUpDnPrice.Size = new System.Drawing.Size(120, 20);
+            this.numUpDnPrice.TabIndex = 67;
+            // 
+            // numUpDnSeats
+            // 
+            this.numUpDnSeats.Location = new System.Drawing.Point(226, 332);
+            this.numUpDnSeats.Name = "numUpDnSeats";
+            this.numUpDnSeats.Size = new System.Drawing.Size(120, 20);
+            this.numUpDnSeats.TabIndex = 68;
+            // 
             // AddFlightForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.numUpDnSeats);
+            this.Controls.Add(this.numUpDnPrice);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lblClass);
             this.Controls.Add(this.cmbxClass);
-            this.Controls.Add(this.mskdtxtbxSeats);
             this.Controls.Add(this.lblSeats);
-            this.Controls.Add(this.mskdtxtbxDate);
             this.Controls.Add(this.mskdtxtbxTime);
-            this.Controls.Add(this.mskdtxtbxPrice);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.txtDept);
             this.Controls.Add(this.txtArr);
@@ -264,6 +260,8 @@ namespace Airlines.FlightForms
             this.Name = "AddFlightForm";
             this.Text = "AddFlightForm";
             this.Load += new System.EventHandler(this.AddFlightForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDnPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDnSeats)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,12 +281,12 @@ namespace Airlines.FlightForms
         private System.Windows.Forms.TextBox txtArr;
         private System.Windows.Forms.TextBox txtDept;
         private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.MaskedTextBox mskdtxtbxPrice;
         private System.Windows.Forms.MaskedTextBox mskdtxtbxTime;
-        private System.Windows.Forms.MaskedTextBox mskdtxtbxDate;
-        private System.Windows.Forms.MaskedTextBox mskdtxtbxSeats;
         private System.Windows.Forms.Label lblSeats;
         private System.Windows.Forms.Label lblClass;
         private System.Windows.Forms.ComboBox cmbxClass;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.NumericUpDown numUpDnPrice;
+        private System.Windows.Forms.NumericUpDown numUpDnSeats;
     }
 }

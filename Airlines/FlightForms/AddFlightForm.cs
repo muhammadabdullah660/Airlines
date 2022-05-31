@@ -24,8 +24,10 @@ namespace Airlines.FlightForms
         }
         private void btnSave_Click (object sender , EventArgs e)
         {
+            double price = Convert.ToDouble(Math.Round(numUpDnPrice.Value , 0));
+            int seats = Convert.ToInt32(Math.Round(numUpDnSeats.Value , 0));
 
-            Flight newFlight = new Flight(txtDept.Text , txtArr.Text , cmbxTrip.Text , mskdtxtbxDate.Text , mskdtxtbxTime.Text , int.Parse(mskdtxtbxSeats.Text) , int.Parse(mskdtxtbxPrice.Text),cmbxClass.Text);
+            Flight newFlight = new Flight(txtDept.Text , txtArr.Text , cmbxTrip.Text , dateTimePicker1.Value , mskdtxtbxTime.Text , seats , price , cmbxClass.Text);
             FlightDL.addFlightIntoList(newFlight);
             MessageBox.Show("Added Succesfully");
             resetTxt();

@@ -28,10 +28,10 @@ namespace Airlines.FlightForms
             txtDept.Text = previous.DepartCity;
             txtArr.Text = previous.ArrCity;
             cmbxTrip.Text = previous.TripType;
-            mskdtxtbxDate.Text = previous.DepartDate;
+            dateTimePicker1.Value = previous.DepartDate;
             mskdtxtbxTime.Text = previous.DepartTime;
-            mskdtxtbxSeats.Text = (previous.Seats).ToString();
-            mskdtxtbxPrice.Text = (previous.Price).ToString();
+            numUpDnSeats.Value = (previous.Seats);
+            numUpDnPrice.Value = Convert.ToDecimal(previous.Price);
             cmbxClass.Text = previous.FlightClass;
         }
 
@@ -40,7 +40,10 @@ namespace Airlines.FlightForms
 
         private void btnSave_Click (object sender , EventArgs e)
         {
-            Flight updated = new Flight(txtDept.Text , txtArr.Text , cmbxTrip.Text , mskdtxtbxDate.Text , mskdtxtbxTime.Text , int.Parse(mskdtxtbxSeats.Text) , int.Parse(mskdtxtbxPrice.Text) , cmbxClass.Text);
+            double price = Convert.ToDouble(Math.Round(numUpDnPrice.Value , 0));
+            int seats = Convert.ToInt32(Math.Round(numUpDnSeats.Value , 0));
+
+            Flight updated = new Flight(txtDept.Text , txtArr.Text , cmbxTrip.Text , dateTimePicker1.Value , mskdtxtbxTime.Text , seats , price , cmbxClass.Text);
             FlightDL.editFlightFromList(previous , updated);
             MessageBox.Show("Updated Successfully");
         }

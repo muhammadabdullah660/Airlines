@@ -53,11 +53,43 @@ namespace Airlines.DL
                     flights += p.MyFlights[i].DepartCity + "^" + p.MyFlights[i].ArrCity + "^" + p.MyFlights[i].TripType + "^" + p.MyFlights[i].DepartDate;
                 }
             }
+
             f.WriteLine(p.UserName + "," + p.UserPassword + "," + p.UserRole + ","
-                + p.Name + "," + p.PassportNo + "," + p.Cnic + "," +
-                p.EMail + "," + p.Gender + "," + p.ContactNum + "," +
-                p.Adult + "," + p.Child + "," + p.Infant + "," + p.Total + "," +
-                flights);
+          + p.Name + "," + p.PassportNo + "," + p.Cnic + "," +
+          p.EMail + "," + p.Gender + "," + p.ContactNum + "," +
+           +p.Total + "," +
+          flights);
+
+
+            f.Flush();
+            f.Close();
+        }
+        public static void storeAllIntoFile (string path)
+        {
+            StreamWriter f = new StreamWriter(path);
+
+            foreach (var p in PassengersList)
+            {
+                string flights = "";
+                for (int i = 0 ; i < p.MyFlights.Count ; i++)
+                {
+                    if (i != p.MyFlights.Count - 1)
+                    {
+                        flights += p.MyFlights[i].DepartCity + "^" + p.MyFlights[i].ArrCity + "^" + p.MyFlights[i].TripType + "^" + p.MyFlights[i].DepartDate + ";";
+                    }
+                    else
+                    {
+                        flights += p.MyFlights[i].DepartCity + "^" + p.MyFlights[i].ArrCity + "^" + p.MyFlights[i].TripType + "^" + p.MyFlights[i].DepartDate;
+                    }
+                }
+
+                f.WriteLine(p.UserName + "," + p.UserPassword + "," + p.UserRole + ","
+              + p.Name + "," + p.PassportNo + "," + p.Cnic + "," +
+              p.EMail + "," + p.Gender + "," + p.ContactNum + "," +
+               +p.Total + "," +
+              flights);
+
+            }
             f.Flush();
             f.Close();
         }
@@ -81,24 +113,29 @@ namespace Airlines.DL
                     p.EMail = (splittedRecord[6]);
                     p.Gender = (splittedRecord[7]);
                     p.ContactNum = (splittedRecord[8]);
-                    p.Adult = int.Parse(splittedRecord[9]);
-                    p.Child = int.Parse(splittedRecord[10]);
-                    p.Infant = int.Parse(splittedRecord[11]);
-                    p.Total = double.Parse(splittedRecord[12]);
-                    string[] splittedRecordFlight = splittedRecord[13].Split(';');
-                    for (int i = 0 ; i < splittedRecordFlight.Length ; i++)
+                    p.Total = double.Parse(splittedRecord[9]);
+                    string[] splittedRecordFlight = splittedRecord[10].Split(';');
+                    if (splittedRecord[10] != "")
                     {
-                        string[] splittedRecordx = splittedRecordFlight[i].Split('^');
-
-                        Flight newFlight = new Flight(splittedRecordx[0] , splittedRecordx[1] , splittedRecordx[2] , splittedRecordx[3]);
-                        Flight myFlight = FlightDL.checkFlight(newFlight);
-                        if (myFlight != null)
+                        for (int i = 0 ; i < splittedRecordFlight.Length ; i++)
                         {
-                            p.bookFlight(myFlight);
+                            string[] splittedRecordx = splittedRecordFlight[i].Split('^');
+
+                            Flight newFlight = new Flight(splittedRecordx[0] , splittedRecordx[1] , splittedRecordx[2] , DateTime.Parse(splittedRecordx[3]));
+                            Flight myFlight = FlightDL.checkFlight(newFlight);
+                            if (myFlight != null)
+                            {
+                                p.bookFlight(myFlight);
+
+                            }
 
                         }
-
                     }
+                    else if (splittedRecord[10] == "")
+                    {
+                        continue;
+                    }
+
                     addPassengerIntoList(p);
                 }
                 f.Close();
