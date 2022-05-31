@@ -15,6 +15,7 @@ namespace Airlines.FlightForms
     public partial class FlightViewForm : Form
     {
         private string path = "Flight.txt";
+        private string pathF = "FlightReq.txt";
         public FlightViewForm ()
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace Airlines.FlightForms
         {
             AddFlightForm newForm = new AddFlightForm();
             newForm.ShowDialog();
-            FlightDL.storeAllFlightsIntoFile(path);
+            FlightDL.storeAllFlightsIntoFile(path , pathF);
             dataBind();
         }
 
@@ -45,18 +46,41 @@ namespace Airlines.FlightForms
             if (gvFlights.Columns["Delete"].Index == e.ColumnIndex)
             {
                 FlightDL.cancelFlight(newFlight);
-                FlightDL.storeAllFlightsIntoFile(path);
+                FlightDL.storeAllFlightsIntoFile(path , pathF);
                 dataBind();
             }
             else if (gvFlights.Columns["Edit"].Index == e.ColumnIndex)
             {
                 UpdateFlightForm newForm = new UpdateFlightForm(newFlight);
                 newForm.ShowDialog();
-                FlightDL.storeAllFlightsIntoFile(path);
+                FlightDL.storeAllFlightsIntoFile(path , pathF);
                 dataBind();
             }
         }
 
+        private void flowLayoutPanel1_Paint (object sender , PaintEventArgs e)
+        {
 
+        }
+
+        private void flowLayoutPanel4_Paint (object sender , PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel2_Paint (object sender , PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel3_Paint (object sender , PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint (object sender , PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -69,6 +69,7 @@ namespace Airlines.PassengerForms
             this.gvFlights.Name = "gvFlights";
             this.gvFlights.Size = new System.Drawing.Size(794, 399);
             this.gvFlights.TabIndex = 4;
+            this.gvFlights.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvFlights_CellContentClick_1);
             // 
             // btnBack
             // 

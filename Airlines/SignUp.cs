@@ -39,9 +39,27 @@ namespace Airlines
             string userPassword = txtPassword.Text;
             string userRole = comboBox1.Text;
             string path = "MUser.txt";
+            string path1 = "Passenger.txt";
             MUser user = new MUser(userName , userPassword , userRole);
             MUserDL.addUserIntoList(user);
             MUserDL.storeIntoFile(path , user);
+            if (!user.isAdmin())
+            {
+                Passenger p = new Passenger();
+                p.UserName = user.UserName;
+                p.UserRole = user.UserRole;
+                p.UserPassword = user.UserPassword;
+                // MessageBox.Show(p.UserName);
+                PassengerDL.addPassengerIntoList(p);
+                PassengerDL.storeIntoFile(path1 , p);
+
+            }
+            /*  else
+              {
+                  userX = new TicketAgent();
+                  TicketAgent a;
+                  a = (TicketAgent)userX;
+              }*/
             MessageBox.Show("Account Created Successfully. You can now Sign In");
             clearData();
         }

@@ -35,5 +35,10 @@ namespace Airlines.PassengerForms
         {
             this.Close();
         }
+
+        private void gvFlights_CellContentClick_1 (object sender , DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

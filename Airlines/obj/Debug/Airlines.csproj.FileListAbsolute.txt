@@ -23,3 +23,4 @@ D:\UET\Second Semester\OOP Lab\Business App - Forms\Airlines\Airlines\obj\Debug\
 D:\UET\Second Semester\OOP Lab\Business App - Forms\Airlines\Airlines\obj\Debug\Airlines.TicketAgentMainForm.resources
 D:\UET\Second Semester\OOP Lab\Business App - Forms\Airlines\Airlines\obj\Debug\Airlines.TicketAgentForms.ViewPersonalDetailsForm.resources
 D:\UET\Second Semester\OOP Lab\Business App - Forms\Airlines\Airlines\obj\Debug\Airlines.TicketAgentForms.ViewOrderedPassengersForm.resources
+D:\UET\Second Semester\OOP Lab\Business App - Forms\Airlines\Airlines\obj\Debug\Airlines.TicketAgentForms.ViewRequestedFlightsForm.resources

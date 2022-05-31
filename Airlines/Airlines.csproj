@@ -58,6 +58,12 @@
     <Compile Include="TicketAgentForms\ViewPersonalDetailsForm.Designer.cs">
       <DependentUpon>ViewPersonalDetailsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TicketAgentForms\ViewRequestedFlightsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketAgentForms\ViewRequestedFlightsForm.Designer.cs">
+      <DependentUpon>ViewRequestedFlightsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TicketAgentMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TicketAgentForms\ViewPersonalDetailsForm.resx">
       <DependentUpon>ViewPersonalDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketAgentForms\ViewRequestedFlightsForm.resx">
+      <DependentUpon>ViewRequestedFlightsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TicketAgentMainForm.resx">
       <DependentUpon>TicketAgentMainForm.cs</DependentUpon>

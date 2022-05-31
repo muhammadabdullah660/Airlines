@@ -65,11 +65,11 @@ namespace Airlines.DL
                 }
             }
         }
-        public static bool loadFromFile (string path)
+        public static bool loadFromFile (string path , string pathF)
         {
             StreamReader f = new StreamReader(path);
             string record;
-            if (File.Exists(path))
+            if (File.Exists(path) && File.Exists(pathF))
             {
                 while ((record = f.ReadLine()) != null)
                 {
@@ -84,6 +84,23 @@ namespace Airlines.DL
                     string flightClass = (splittedRecord[7]);
                     Flight newFlight = new Flight(departCity , arrCity , tripType , departDate , departTime , seats , price , flightClass);
                     addFlightIntoList(newFlight);
+
+                }
+                f.Close();
+                f = new StreamReader(pathF);
+                while ((record = f.ReadLine()) != null)
+                {
+                    string[] splittedRecord = record.Split(',');
+                    string departCity = splittedRecord[0];
+                    string arrCity = (splittedRecord[1]);
+                    string tripType = (splittedRecord[2]);
+                    string departDate = splittedRecord[3];
+                    string departTime = (splittedRecord[4]);
+                    int seats = int.Parse(splittedRecord[5]);
+                    int price = int.Parse(splittedRecord[6]);
+                    string flightClass = (splittedRecord[7]);
+                    Flight newFlight = new Flight(departCity , arrCity , tripType , departDate , departTime , seats , price , flightClass);
+                    addReqFlightIntoList(newFlight);
 
                 }
                 f.Close();
@@ -102,11 +119,18 @@ namespace Airlines.DL
             f.Flush();
             f.Close();
         }
-        public static void storeAllFlightsIntoFile (string path)
+        public static void storeAllFlightsIntoFile (string path , string pathF)
         {
 
             StreamWriter f = new StreamWriter(path);
             foreach (var newFlight in FlightsList)
+            {
+                f.WriteLine(newFlight.DepartCity + "," + newFlight.ArrCity + "," + newFlight.TripType + "," + newFlight.DepartDate + "," + newFlight.DepartTime + "," + newFlight.Seats + "," + newFlight.Price + "," + newFlight.FlightClass);
+            }
+            f.Flush();
+            f.Close();
+            f = new StreamWriter(pathF);
+            foreach (var newFlight in RequestedFlightsList)
             {
                 f.WriteLine(newFlight.DepartCity + "," + newFlight.ArrCity + "," + newFlight.TripType + "," + newFlight.DepartDate + "," + newFlight.DepartTime + "," + newFlight.Seats + "," + newFlight.Price + "," + newFlight.FlightClass);
             }

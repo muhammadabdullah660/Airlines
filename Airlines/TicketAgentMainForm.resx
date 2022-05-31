@@ -167,15 +167,6 @@
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>About</value>
   </data>
-  <data name="contactUsToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Lucida Bright, 10pt, style=Bold</value>
-  </data>
-  <data name="contactUsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 36</value>
-  </data>
-  <data name="contactUsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Contact Us</value>
-  </data>
   <data name="orderedPassengersToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Bright, 10pt, style=Bold</value>
   </data>
@@ -184,6 +175,15 @@
   </data>
   <data name="orderedPassengersToolStripMenuItem.Text" xml:space="preserve">
     <value>Ordered Passengers</value>
+  </data>
+  <data name="requestedFlightsToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Lucida Bright, 10pt, style=Bold</value>
+  </data>
+  <data name="requestedFlightsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 51</value>
+  </data>
+  <data name="requestedFlightsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Requested Flights</value>
   </data>
   <data name="ticketagentMenuStrp.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -251,16 +251,16 @@
   <data name="&gt;&gt;aboutToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;contactUsToolStripMenuItem.Name" xml:space="preserve">
-    <value>contactUsToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;contactUsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;orderedPassengersToolStripMenuItem.Name" xml:space="preserve">
     <value>orderedPassengersToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;orderedPassengersToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;requestedFlightsToolStripMenuItem.Name" xml:space="preserve">
+    <value>requestedFlightsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;requestedFlightsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

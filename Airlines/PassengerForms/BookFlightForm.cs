@@ -63,5 +63,9 @@ namespace Airlines.PassengerForms
             }
         }
 
+        private void mskdtxtbxDate_MaskInputRejected (object sender , MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

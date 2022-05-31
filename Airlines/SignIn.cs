@@ -57,11 +57,10 @@ namespace Airlines
             MUser user = new MUser(userName , userPassword);
             MUser userX = MUserDL.isValid(user);
 
+            //MessageBox.Show(userX.UserName);
             if (!userX.isAdmin())
             {
-                userX = new Passenger();
-                Passenger p;
-                p = (Passenger)userX;
+                Passenger p = PassengerDL.isValidPassenger(userX);
                 PassengerMainForm pass = new PassengerMainForm(p);
                 pass.Show();
 
@@ -69,7 +68,7 @@ namespace Airlines
             else if (userX.isAdmin())
             {
                 userX = new TicketAgent();
-                TicketAgent a = new TicketAgent();
+                TicketAgent a;
                 a = (TicketAgent)userX;
                 TicketAgentMainForm adm = new TicketAgentMainForm(a);
                 adm.Show();

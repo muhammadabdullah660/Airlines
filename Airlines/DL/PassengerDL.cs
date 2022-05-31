@@ -26,6 +26,18 @@ namespace Airlines.DL
             }
             SortedPassengersList = passengersList.OrderByDescending(p => p.Total).ToList();
         }
+        public static Passenger isValidPassenger (MUser userX)
+        {
+            foreach (Passenger item in PassengersList)
+            {
+
+                if (userX.UserName == item.UserName && userX.UserPassword == item.UserPassword)
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
         public static void storeIntoFile (string path , Passenger p)
         {
             StreamWriter f = new StreamWriter(path , true);

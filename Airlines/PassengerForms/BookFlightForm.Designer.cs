@@ -217,6 +217,7 @@ namespace Airlines.PassengerForms
             this.mskdtxtbxDate.Size = new System.Drawing.Size(121, 20);
             this.mskdtxtbxDate.TabIndex = 65;
             this.mskdtxtbxDate.ValidatingType = typeof(System.DateTime);
+            this.mskdtxtbxDate.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskdtxtbxDate_MaskInputRejected);
             // 
             // lblClass
             // 

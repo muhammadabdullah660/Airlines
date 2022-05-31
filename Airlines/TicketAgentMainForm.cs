@@ -53,5 +53,11 @@ namespace Airlines
         {
 
         }
+
+        private void requestedFlightsToolStripMenuItem_Click (object sender , EventArgs e)
+        {
+            ViewRequestedFlightsForm reqForm = new ViewRequestedFlightsForm();
+            reqForm.Show();
+        }
     }
 }
