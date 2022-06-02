@@ -22,7 +22,7 @@ namespace Airlines
         private void clearData ()
         {
             txtPassword.Text = "";
-            comboBox1.Text = "";
+            cmbxRole.Text = "";
             txtUserName.Text = "";
         }
         private void SignUp_Load (object sender , EventArgs e)
@@ -31,33 +31,42 @@ namespace Airlines
         }
         private void btnNext_Click (object sender , EventArgs e)
         {
+
             string userName = txtUserName.Text;
             string userPassword = txtPassword.Text;
-            string userRole = comboBox1.Text;
+            string userRole = cmbxRole.Text;
             string path = "MUser.txt";
             string path1 = "Passenger.txt";
-            MUser user = new MUser(userName , userPassword , userRole);
-            MUserDL.addUserIntoList(user);
-            MUserDL.storeIntoFile(path , user);
-            if (!user.isAdmin())
+            if (userName != "" && userPassword != "")
             {
-                Passenger p = new Passenger();
-                p.UserName = user.UserName;
-                p.UserRole = user.UserRole;
-                p.UserPassword = user.UserPassword;
-                // MessageBox.Show(p.UserName);
-                PassengerDL.addPassengerIntoList(p);
-                PassengerDL.storeIntoFile(path1 , p);
+                MUser user = new MUser(userName , userPassword , userRole);
+                MUserDL.addUserIntoList(user);
+                MUserDL.storeIntoFile(path , user);
+                if (!user.isAdmin())
+                {
+                    Passenger p = new Passenger();
+                    p.UserName = user.UserName;
+                    p.UserRole = user.UserRole;
+                    p.UserPassword = user.UserPassword;
+                    // MessageBox.Show(p.UserName);
+                    PassengerDL.addPassengerIntoList(p);
+                    PassengerDL.storeIntoFile(path1 , p);
 
+                }
+                /*  else
+                  {
+                      userX = new TicketAgent();
+                      TicketAgent a;
+                      a = (TicketAgent)userX;
+                  }*/
+                MessageBox.Show("Account Created Successfully. You can now Sign In");
+                clearData();
             }
-            /*  else
-              {
-                  userX = new TicketAgent();
-                  TicketAgent a;
-                  a = (TicketAgent)userX;
-              }*/
-            MessageBox.Show("Account Created Successfully. You can now Sign In");
-            clearData();
+            else
+            {
+                MessageBox.Show("Input must not be empty");
+            }
+
         }
 
         private void btnBack_Click (object sender , EventArgs e)
@@ -70,6 +79,19 @@ namespace Airlines
             this.Close();
             Form signInForm = new SignIn();
             signInForm.Show();
+        }
+
+        private void txtUserName_Validating (object sender , CancelEventArgs e)
+        {
+            if (txtUserName.Text == String.Empty)
+            {
+                MessageBox.Show("Enter a Valid Name");
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged (object sender , EventArgs e)
+        {
+
         }
     }
 }

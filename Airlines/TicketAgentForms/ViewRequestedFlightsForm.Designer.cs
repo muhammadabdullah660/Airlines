@@ -94,6 +94,7 @@ namespace Airlines.TicketAgentForms
             this.tableLayoutPanel2.SetRowSpan(this.gvFlights, 2);
             this.gvFlights.Size = new System.Drawing.Size(794, 344);
             this.gvFlights.TabIndex = 5;
+            this.gvFlights.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvFlights_CellContentClick);
             // 
             // Add
             // 

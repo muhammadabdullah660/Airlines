@@ -1,2 +1,1 @@
-abd,123,User,abd,fjd,asjd,wur,Male,274,0,Sailkot^Mul^One way^11/11/2001
-x,1,User,sd,sac,s,sc,Female,sd,0,fsd^lhr^Return^11/11/2001
+abd,123,Passenger,muhammad,PA818199,23301-0201200-1,mafivs512@gmail.com,Male,0302-9818727,19693.5,lhr^fsd^One Way^6/2/2022 5:52:02 AM^8750;ed^ef^Return^6/1/2022 6:10:47 AM^6;lhr^fsd^One Way^6/2/2022 5:52:02 AM^10937.5

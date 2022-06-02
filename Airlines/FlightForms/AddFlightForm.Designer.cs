@@ -29,9 +29,9 @@ namespace Airlines.FlightForms
         /// </summary>
         private void InitializeComponent ()
         {
+            this.lblMainHeading = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.txtDept = new System.Windows.Forms.TextBox();
             this.lblDeptCity = new System.Windows.Forms.Label();
             this.lblArrCity = new System.Windows.Forms.Label();
@@ -48,16 +48,51 @@ namespace Airlines.FlightForms
             this.lblSeats = new System.Windows.Forms.Label();
             this.lblClass = new System.Windows.Forms.Label();
             this.cmbxClass = new System.Windows.Forms.ComboBox();
-            this.lblMainHeading = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDnPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDnSeats)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // lblMainHeading
+            // 
+            this.lblMainHeading.AutoSize = true;
+            this.lblMainHeading.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tableLayoutPanel1.SetColumnSpan(this.lblMainHeading, 2);
+            this.lblMainHeading.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblMainHeading.Font = new System.Drawing.Font("Trebuchet MS", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblMainHeading.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMainHeading.Location = new System.Drawing.Point(3, 0);
+            this.lblMainHeading.Name = "lblMainHeading";
+            this.tableLayoutPanel1.SetRowSpan(this.lblMainHeading, 2);
+            this.lblMainHeading.Size = new System.Drawing.Size(794, 100);
+            this.lblMainHeading.TabIndex = 72;
+            this.lblMainHeading.Text = "Add a New Flight";
+            this.lblMainHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMainHeading.Click += new System.EventHandler(this.lblMainHeading_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.lblMainHeading, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 100);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel2.BackgroundImage = global::Airlines.Properties.Resources.ross_parmly_rf6ywHVkrlY_unsplash;
+            this.tableLayoutPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -80,6 +115,7 @@ namespace Airlines.FlightForms
             this.tableLayoutPanel2.Controls.Add(this.btnSave, 1, 8);
             this.tableLayoutPanel2.Controls.Add(this.btnBack, 0, 8);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 100);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 9;
@@ -94,6 +130,189 @@ namespace Airlines.FlightForms
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(800, 350);
             this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // txtDept
+            // 
+            this.txtDept.Location = new System.Drawing.Point(403, 3);
+            this.txtDept.Multiline = true;
+            this.txtDept.Name = "txtDept";
+            this.txtDept.Size = new System.Drawing.Size(281, 32);
+            this.txtDept.TabIndex = 81;
+            // 
+            // lblDeptCity
+            // 
+            this.lblDeptCity.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblDeptCity.AutoSize = true;
+            this.lblDeptCity.BackColor = System.Drawing.Color.Transparent;
+            this.lblDeptCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeptCity.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblDeptCity.Location = new System.Drawing.Point(294, 10);
+            this.lblDeptCity.Name = "lblDeptCity";
+            this.lblDeptCity.Size = new System.Drawing.Size(103, 17);
+            this.lblDeptCity.TabIndex = 80;
+            this.lblDeptCity.Text = "Departure City:";
+            // 
+            // lblArrCity
+            // 
+            this.lblArrCity.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblArrCity.AutoSize = true;
+            this.lblArrCity.BackColor = System.Drawing.Color.Transparent;
+            this.lblArrCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArrCity.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblArrCity.Location = new System.Drawing.Point(318, 48);
+            this.lblArrCity.Name = "lblArrCity";
+            this.lblArrCity.Size = new System.Drawing.Size(79, 17);
+            this.lblArrCity.TabIndex = 82;
+            this.lblArrCity.Text = "Arrival City:";
+            // 
+            // txtArr
+            // 
+            this.txtArr.Location = new System.Drawing.Point(403, 41);
+            this.txtArr.Multiline = true;
+            this.txtArr.Name = "txtArr";
+            this.txtArr.Size = new System.Drawing.Size(281, 32);
+            this.txtArr.TabIndex = 83;
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblPrice.Location = new System.Drawing.Point(353, 76);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(44, 17);
+            this.lblPrice.TabIndex = 84;
+            this.lblPrice.Text = "Price:";
+            // 
+            // numUpDnPrice
+            // 
+            this.numUpDnPrice.Location = new System.Drawing.Point(403, 79);
+            this.numUpDnPrice.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.numUpDnPrice.Name = "numUpDnPrice";
+            this.numUpDnPrice.Size = new System.Drawing.Size(120, 20);
+            this.numUpDnPrice.TabIndex = 87;
+            // 
+            // lblDeptTime
+            // 
+            this.lblDeptTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDeptTime.AutoSize = true;
+            this.lblDeptTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblDeptTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeptTime.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblDeptTime.Location = new System.Drawing.Point(286, 114);
+            this.lblDeptTime.Name = "lblDeptTime";
+            this.lblDeptTime.Size = new System.Drawing.Size(111, 17);
+            this.lblDeptTime.TabIndex = 88;
+            this.lblDeptTime.Text = "Departure Time:";
+            // 
+            // mskdtxtbxTime
+            // 
+            this.mskdtxtbxTime.Location = new System.Drawing.Point(403, 117);
+            this.mskdtxtbxTime.Mask = "90:00";
+            this.mskdtxtbxTime.Name = "mskdtxtbxTime";
+            this.mskdtxtbxTime.Size = new System.Drawing.Size(100, 20);
+            this.mskdtxtbxTime.TabIndex = 89;
+            this.mskdtxtbxTime.ValidatingType = typeof(System.DateTime);
+            // 
+            // lblDeptDate
+            // 
+            this.lblDeptDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDeptDate.AutoSize = true;
+            this.lblDeptDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDeptDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeptDate.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblDeptDate.Location = new System.Drawing.Point(287, 152);
+            this.lblDeptDate.Name = "lblDeptDate";
+            this.lblDeptDate.Size = new System.Drawing.Size(110, 17);
+            this.lblDeptDate.TabIndex = 90;
+            this.lblDeptDate.Text = "Departure Date:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(403, 155);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 91;
+            // 
+            // lblTrip
+            // 
+            this.lblTrip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTrip.AutoSize = true;
+            this.lblTrip.BackColor = System.Drawing.Color.Transparent;
+            this.lblTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrip.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblTrip.Location = new System.Drawing.Point(324, 190);
+            this.lblTrip.Name = "lblTrip";
+            this.lblTrip.Size = new System.Drawing.Size(73, 17);
+            this.lblTrip.TabIndex = 92;
+            this.lblTrip.Text = "Trip Type:";
+            // 
+            // cmbxTrip
+            // 
+            this.cmbxTrip.FormattingEnabled = true;
+            this.cmbxTrip.Items.AddRange(new object[] {
+            "One Way",
+            "Return"});
+            this.cmbxTrip.Location = new System.Drawing.Point(403, 193);
+            this.cmbxTrip.Name = "cmbxTrip";
+            this.cmbxTrip.Size = new System.Drawing.Size(101, 21);
+            this.cmbxTrip.TabIndex = 93;
+            // 
+            // numUpDnSeats
+            // 
+            this.numUpDnSeats.Location = new System.Drawing.Point(403, 231);
+            this.numUpDnSeats.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numUpDnSeats.Name = "numUpDnSeats";
+            this.numUpDnSeats.Size = new System.Drawing.Size(120, 20);
+            this.numUpDnSeats.TabIndex = 95;
+            // 
+            // lblSeats
+            // 
+            this.lblSeats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSeats.AutoSize = true;
+            this.lblSeats.BackColor = System.Drawing.Color.Transparent;
+            this.lblSeats.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeats.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblSeats.Location = new System.Drawing.Point(349, 228);
+            this.lblSeats.Name = "lblSeats";
+            this.lblSeats.Size = new System.Drawing.Size(48, 17);
+            this.lblSeats.TabIndex = 94;
+            this.lblSeats.Text = "Seats:";
+            // 
+            // lblClass
+            // 
+            this.lblClass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblClass.AutoSize = true;
+            this.lblClass.BackColor = System.Drawing.Color.Transparent;
+            this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblClass.Location = new System.Drawing.Point(313, 266);
+            this.lblClass.Name = "lblClass";
+            this.lblClass.Size = new System.Drawing.Size(84, 17);
+            this.lblClass.TabIndex = 97;
+            this.lblClass.Text = "Flight Class:";
+            // 
+            // cmbxClass
+            // 
+            this.cmbxClass.FormattingEnabled = true;
+            this.cmbxClass.Items.AddRange(new object[] {
+            "Economy ",
+            "Business",
+            "All"});
+            this.cmbxClass.Location = new System.Drawing.Point(403, 269);
+            this.cmbxClass.Name = "cmbxClass";
+            this.cmbxClass.Size = new System.Drawing.Size(101, 21);
+            this.cmbxClass.TabIndex = 96;
             // 
             // btnSave
             // 
@@ -119,208 +338,23 @@ namespace Airlines.FlightForms
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // txtDept
-            // 
-            this.txtDept.Location = new System.Drawing.Point(403, 3);
-            this.txtDept.Multiline = true;
-            this.txtDept.Name = "txtDept";
-            this.txtDept.Size = new System.Drawing.Size(281, 32);
-            this.txtDept.TabIndex = 81;
-            // 
-            // lblDeptCity
-            // 
-            this.lblDeptCity.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblDeptCity.AutoSize = true;
-            this.lblDeptCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeptCity.Location = new System.Drawing.Point(294, 10);
-            this.lblDeptCity.Name = "lblDeptCity";
-            this.lblDeptCity.Size = new System.Drawing.Size(103, 17);
-            this.lblDeptCity.TabIndex = 80;
-            this.lblDeptCity.Text = "Departure City:";
-            // 
-            // lblArrCity
-            // 
-            this.lblArrCity.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblArrCity.AutoSize = true;
-            this.lblArrCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArrCity.Location = new System.Drawing.Point(318, 48);
-            this.lblArrCity.Name = "lblArrCity";
-            this.lblArrCity.Size = new System.Drawing.Size(79, 17);
-            this.lblArrCity.TabIndex = 82;
-            this.lblArrCity.Text = "Arrival City:";
-            // 
-            // txtArr
-            // 
-            this.txtArr.Location = new System.Drawing.Point(403, 41);
-            this.txtArr.Multiline = true;
-            this.txtArr.Name = "txtArr";
-            this.txtArr.Size = new System.Drawing.Size(281, 32);
-            this.txtArr.TabIndex = 83;
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(353, 76);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(44, 17);
-            this.lblPrice.TabIndex = 84;
-            this.lblPrice.Text = "Price:";
-            // 
-            // numUpDnPrice
-            // 
-            this.numUpDnPrice.Location = new System.Drawing.Point(403, 79);
-            this.numUpDnPrice.Name = "numUpDnPrice";
-            this.numUpDnPrice.Size = new System.Drawing.Size(120, 20);
-            this.numUpDnPrice.TabIndex = 87;
-            // 
-            // lblDeptTime
-            // 
-            this.lblDeptTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDeptTime.AutoSize = true;
-            this.lblDeptTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeptTime.Location = new System.Drawing.Point(286, 114);
-            this.lblDeptTime.Name = "lblDeptTime";
-            this.lblDeptTime.Size = new System.Drawing.Size(111, 17);
-            this.lblDeptTime.TabIndex = 88;
-            this.lblDeptTime.Text = "Departure Time:";
-            // 
-            // mskdtxtbxTime
-            // 
-            this.mskdtxtbxTime.Location = new System.Drawing.Point(403, 117);
-            this.mskdtxtbxTime.Mask = "90:00";
-            this.mskdtxtbxTime.Name = "mskdtxtbxTime";
-            this.mskdtxtbxTime.Size = new System.Drawing.Size(100, 20);
-            this.mskdtxtbxTime.TabIndex = 89;
-            this.mskdtxtbxTime.ValidatingType = typeof(System.DateTime);
-            // 
-            // lblDeptDate
-            // 
-            this.lblDeptDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDeptDate.AutoSize = true;
-            this.lblDeptDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeptDate.Location = new System.Drawing.Point(287, 152);
-            this.lblDeptDate.Name = "lblDeptDate";
-            this.lblDeptDate.Size = new System.Drawing.Size(110, 17);
-            this.lblDeptDate.TabIndex = 90;
-            this.lblDeptDate.Text = "Departure Date:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(403, 155);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 91;
-            // 
-            // lblTrip
-            // 
-            this.lblTrip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTrip.AutoSize = true;
-            this.lblTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrip.Location = new System.Drawing.Point(324, 190);
-            this.lblTrip.Name = "lblTrip";
-            this.lblTrip.Size = new System.Drawing.Size(73, 17);
-            this.lblTrip.TabIndex = 92;
-            this.lblTrip.Text = "Trip Type:";
-            // 
-            // cmbxTrip
-            // 
-            this.cmbxTrip.FormattingEnabled = true;
-            this.cmbxTrip.Items.AddRange(new object[] {
-            "One Way",
-            "Return"});
-            this.cmbxTrip.Location = new System.Drawing.Point(403, 193);
-            this.cmbxTrip.Name = "cmbxTrip";
-            this.cmbxTrip.Size = new System.Drawing.Size(101, 21);
-            this.cmbxTrip.TabIndex = 93;
-            // 
-            // numUpDnSeats
-            // 
-            this.numUpDnSeats.Location = new System.Drawing.Point(403, 231);
-            this.numUpDnSeats.Name = "numUpDnSeats";
-            this.numUpDnSeats.Size = new System.Drawing.Size(120, 20);
-            this.numUpDnSeats.TabIndex = 95;
-            // 
-            // lblSeats
-            // 
-            this.lblSeats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSeats.AutoSize = true;
-            this.lblSeats.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeats.Location = new System.Drawing.Point(349, 228);
-            this.lblSeats.Name = "lblSeats";
-            this.lblSeats.Size = new System.Drawing.Size(48, 17);
-            this.lblSeats.TabIndex = 94;
-            this.lblSeats.Text = "Seats:";
-            // 
-            // lblClass
-            // 
-            this.lblClass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblClass.AutoSize = true;
-            this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClass.Location = new System.Drawing.Point(313, 266);
-            this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(84, 17);
-            this.lblClass.TabIndex = 97;
-            this.lblClass.Text = "Flight Class:";
-            // 
-            // cmbxClass
-            // 
-            this.cmbxClass.FormattingEnabled = true;
-            this.cmbxClass.Items.AddRange(new object[] {
-            "Economy ",
-            "Business",
-            "All"});
-            this.cmbxClass.Location = new System.Drawing.Point(403, 269);
-            this.cmbxClass.Name = "cmbxClass";
-            this.cmbxClass.Size = new System.Drawing.Size(101, 21);
-            this.cmbxClass.TabIndex = 96;
-            // 
-            // lblMainHeading
-            // 
-            this.lblMainHeading.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.lblMainHeading, 2);
-            this.lblMainHeading.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblMainHeading.Font = new System.Drawing.Font("Trebuchet MS", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lblMainHeading.Location = new System.Drawing.Point(3, 0);
-            this.lblMainHeading.Name = "lblMainHeading";
-            this.tableLayoutPanel1.SetRowSpan(this.lblMainHeading, 2);
-            this.lblMainHeading.Size = new System.Drawing.Size(794, 100);
-            this.lblMainHeading.TabIndex = 72;
-            this.lblMainHeading.Text = "Add a New Flight";
-            this.lblMainHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.lblMainHeading, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 100);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
             // AddFlightForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "AddFlightForm";
             this.Text = "AddFlightForm";
             this.Load += new System.EventHandler(this.AddFlightForm_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDnPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDnSeats)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

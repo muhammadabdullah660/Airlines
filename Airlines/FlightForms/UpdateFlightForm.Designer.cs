@@ -92,7 +92,9 @@ namespace Airlines.FlightForms
             // 
             this.lblDeptCity.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblDeptCity.AutoSize = true;
+            this.lblDeptCity.BackColor = System.Drawing.Color.Transparent;
             this.lblDeptCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeptCity.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblDeptCity.Location = new System.Drawing.Point(294, 10);
             this.lblDeptCity.Name = "lblDeptCity";
             this.lblDeptCity.Size = new System.Drawing.Size(103, 17);
@@ -103,7 +105,9 @@ namespace Airlines.FlightForms
             // 
             this.lblArrCity.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblArrCity.AutoSize = true;
+            this.lblArrCity.BackColor = System.Drawing.Color.Transparent;
             this.lblArrCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArrCity.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblArrCity.Location = new System.Drawing.Point(318, 48);
             this.lblArrCity.Name = "lblArrCity";
             this.lblArrCity.Size = new System.Drawing.Size(79, 17);
@@ -121,6 +125,11 @@ namespace Airlines.FlightForms
             // numUpDnPrice
             // 
             this.numUpDnPrice.Location = new System.Drawing.Point(403, 79);
+            this.numUpDnPrice.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.numUpDnPrice.Name = "numUpDnPrice";
             this.numUpDnPrice.Size = new System.Drawing.Size(120, 20);
             this.numUpDnPrice.TabIndex = 87;
@@ -129,7 +138,9 @@ namespace Airlines.FlightForms
             // 
             this.lblDeptTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDeptTime.AutoSize = true;
+            this.lblDeptTime.BackColor = System.Drawing.Color.Transparent;
             this.lblDeptTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeptTime.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblDeptTime.Location = new System.Drawing.Point(286, 114);
             this.lblDeptTime.Name = "lblDeptTime";
             this.lblDeptTime.Size = new System.Drawing.Size(111, 17);
@@ -138,6 +149,9 @@ namespace Airlines.FlightForms
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel2.BackgroundImage = global::Airlines.Properties.Resources.ross_parmly_rf6ywHVkrlY_unsplash;
+            this.tableLayoutPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -160,6 +174,7 @@ namespace Airlines.FlightForms
             this.tableLayoutPanel2.Controls.Add(this.btnSave, 1, 8);
             this.tableLayoutPanel2.Controls.Add(this.btnBack, 0, 8);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 100);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 9;
@@ -179,7 +194,9 @@ namespace Airlines.FlightForms
             // 
             this.lblPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPrice.AutoSize = true;
+            this.lblPrice.BackColor = System.Drawing.Color.Transparent;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblPrice.Location = new System.Drawing.Point(353, 76);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(44, 17);
@@ -199,7 +216,9 @@ namespace Airlines.FlightForms
             // 
             this.lblDeptDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDeptDate.AutoSize = true;
+            this.lblDeptDate.BackColor = System.Drawing.Color.Transparent;
             this.lblDeptDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeptDate.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblDeptDate.Location = new System.Drawing.Point(287, 152);
             this.lblDeptDate.Name = "lblDeptDate";
             this.lblDeptDate.Size = new System.Drawing.Size(110, 17);
@@ -217,7 +236,9 @@ namespace Airlines.FlightForms
             // 
             this.lblTrip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTrip.AutoSize = true;
+            this.lblTrip.BackColor = System.Drawing.Color.Transparent;
             this.lblTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrip.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblTrip.Location = new System.Drawing.Point(324, 190);
             this.lblTrip.Name = "lblTrip";
             this.lblTrip.Size = new System.Drawing.Size(73, 17);
@@ -238,6 +259,11 @@ namespace Airlines.FlightForms
             // numUpDnSeats
             // 
             this.numUpDnSeats.Location = new System.Drawing.Point(403, 231);
+            this.numUpDnSeats.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.numUpDnSeats.Name = "numUpDnSeats";
             this.numUpDnSeats.Size = new System.Drawing.Size(120, 20);
             this.numUpDnSeats.TabIndex = 95;
@@ -246,7 +272,9 @@ namespace Airlines.FlightForms
             // 
             this.lblSeats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSeats.AutoSize = true;
+            this.lblSeats.BackColor = System.Drawing.Color.Transparent;
             this.lblSeats.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeats.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblSeats.Location = new System.Drawing.Point(349, 228);
             this.lblSeats.Name = "lblSeats";
             this.lblSeats.Size = new System.Drawing.Size(48, 17);
@@ -257,7 +285,9 @@ namespace Airlines.FlightForms
             // 
             this.lblClass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblClass.AutoSize = true;
+            this.lblClass.BackColor = System.Drawing.Color.Transparent;
             this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.lblClass.Location = new System.Drawing.Point(313, 266);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(84, 17);
@@ -279,9 +309,11 @@ namespace Airlines.FlightForms
             // lblMainHeading
             // 
             this.lblMainHeading.AutoSize = true;
+            this.lblMainHeading.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tableLayoutPanel1.SetColumnSpan(this.lblMainHeading, 2);
             this.lblMainHeading.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMainHeading.Font = new System.Drawing.Font("Trebuchet MS", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblMainHeading.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.lblMainHeading.Location = new System.Drawing.Point(3, 0);
             this.lblMainHeading.Name = "lblMainHeading";
             this.tableLayoutPanel1.SetRowSpan(this.lblMainHeading, 2);
@@ -289,6 +321,7 @@ namespace Airlines.FlightForms
             this.lblMainHeading.TabIndex = 72;
             this.lblMainHeading.Text = "Update Flight Details";
             this.lblMainHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMainHeading.Click += new System.EventHandler(this.lblMainHeading_Click);
             // 
             // tableLayoutPanel1
             // 

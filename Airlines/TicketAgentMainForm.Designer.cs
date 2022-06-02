@@ -30,6 +30,7 @@ namespace Airlines
         private void InitializeComponent ()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketAgentMainForm));
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.ticketagentMenuStrp = new System.Windows.Forms.MenuStrip();
             this.passengersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,13 +38,22 @@ namespace Airlines
             this.orderedPassengersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.requestedFlightsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             this.ticketagentMenuStrp.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Controls.Add(this.ticketagentMenuStrp, 0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // ticketagentMenuStrp
             // 
             resources.ApplyResources(this.ticketagentMenuStrp, "ticketagentMenuStrp");
-            this.ticketagentMenuStrp.BackColor = System.Drawing.Color.DarkRed;
+            this.ticketagentMenuStrp.BackColor = System.Drawing.Color.Firebrick;
+            this.tableLayoutPanel1.SetColumnSpan(this.ticketagentMenuStrp, 2);
             this.ticketagentMenuStrp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.passengersToolStripMenuItem,
             this.flightToolStripMenuItem,
@@ -51,6 +61,7 @@ namespace Airlines
             this.requestedFlightsToolStripMenuItem,
             this.logOutToolStripMenuItem});
             this.ticketagentMenuStrp.Name = "ticketagentMenuStrp";
+            this.tableLayoutPanel1.SetRowSpan(this.ticketagentMenuStrp, 2);
             // 
             // passengersToolStripMenuItem
             // 
@@ -61,7 +72,6 @@ namespace Airlines
             this.passengersToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5);
             this.passengersToolStripMenuItem.Name = "passengersToolStripMenuItem";
             this.passengersToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.passengersToolStripMenuItem.Click += new System.EventHandler(this.passengersToolStripMenuItem_Click);
             // 
             // personalToolStripMenuItem1
             // 
@@ -100,14 +110,22 @@ namespace Airlines
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackgroundImage = global::Airlines.Properties.Resources.difa_naufal_YPj_96uaCwU_unsplash;
+            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            // 
             // TicketAgentMainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.ticketagentMenuStrp);
+            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "TicketAgentMainForm";
             this.Load += new System.EventHandler(this.TicketAgentMainForm_Load);
             this.InputLanguageChanged += new System.Windows.Forms.InputLanguageChangedEventHandler(this.TicketAgentMainForm_InputLanguageChanged);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ticketagentMenuStrp.ResumeLayout(false);
             this.ticketagentMenuStrp.PerformLayout();
             this.ResumeLayout(false);
@@ -115,13 +133,14 @@ namespace Airlines
         }
 
         #endregion
-
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.MenuStrip ticketagentMenuStrp;
         private System.Windows.Forms.ToolStripMenuItem passengersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem flightToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personalToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem flightToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orderedPassengersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem requestedFlightsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }

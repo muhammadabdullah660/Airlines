@@ -73,6 +73,46 @@ namespace Airlines.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap difa_naufal_YPj_96uaCwU_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("difa-naufal-YPj-96uaCwU-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap katie_moum_7XGtYefMXiQ_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("katie-moum-7XGtYefMXiQ-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nick_fewings_zF_pTLx_Dkg_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("nick-fewings-zF_pTLx_Dkg-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ross_parmly_rf6ywHVkrlY_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("ross-parmly-rf6ywHVkrlY-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap saj_shafique_h1Z4CNkncfo_unsplash {
             get {
                 object obj = ResourceManager.GetObject("saj-shafique-h1Z4CNkncfo-unsplash", resourceCulture);

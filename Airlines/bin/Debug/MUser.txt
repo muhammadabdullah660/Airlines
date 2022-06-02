@@ -1,3 +1,2 @@
-abd,123,User
-x,1,User
-ali,123,Admin
+abd,123,Passenger
+a,1,Admin

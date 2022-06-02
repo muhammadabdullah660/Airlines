@@ -48,10 +48,7 @@ namespace Airlines.TicketAgentForms
 
         }
 
-        private void passengerDLBindingSource_CurrentChanged (object sender , EventArgs e)
-        {
 
-        }
         public void dataBind ()
         {
             gvPassengers.DataSource = null;

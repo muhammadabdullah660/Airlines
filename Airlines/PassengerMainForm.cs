@@ -65,6 +65,7 @@ namespace Airlines
 
         private void btnLogOut_Click (object sender , EventArgs e)
         {
+            PassengerDL.sortPassengersByTotal();
             PassengerDL.storeAllIntoFile(path);
             this.Close();
         }

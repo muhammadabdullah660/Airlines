@@ -45,6 +45,10 @@ namespace Airlines
         private void signInToolStripMenuItem_Click (object sender , EventArgs e)
         {
             Form signInForm = new SignIn();
+            signInForm.StartPosition = FormStartPosition.Manual;
+            signInForm.Location = this.Location;
+            signInForm.Size = new Size();
+            signInForm.Size = Size;
             signInForm.Show();
         }
 
@@ -57,6 +61,16 @@ namespace Airlines
         {
             AboutForm f = new AboutForm();
             f.Show();
+        }
+
+        private void tableLayoutPanel2_Paint (object sender , PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click (object sender , EventArgs e)
+        {
+
         }
     }
 }

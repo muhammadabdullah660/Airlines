@@ -2,6 +2,9 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Airlines.BL.Flight">
     <Position X="5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAETAAEAEwAAAAAAAgAAgAIEAAAAAQAAAQAAgAAEAAA=</HashCode>
       <FileName>BL\Flight.cs</FileName>
@@ -9,13 +12,19 @@
   </Class>
   <Class Name="Airlines.BL.MUser">
     <Position X="0.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAQAAAAMAAAA=</HashCode>
       <FileName>BL\MUser.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Airlines.BL.Passenger">
-    <Position X="2.5" Y="3.75" Width="1.5" />
+    <Position X="2.5" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>EIAAGRCBABAAAAKAAAAAgAQAACAMQAAgAEAAAAAAAAg=</HashCode>
       <FileName>BL\Passenger.cs</FileName>
@@ -47,6 +56,9 @@
   </Class>
   <Class Name="Airlines.DL.MUserDL">
     <Position X="3" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACQAAAABAgAAAAAIAAAACAAAQCAEAAAA=</HashCode>
       <FileName>DL\MUserDL.cs</FileName>
@@ -57,6 +69,9 @@
   </Class>
   <Class Name="Airlines.DL.PassengerDL">
     <Position X="7.75" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>ABAAAQAQAAAQAABgAABAAAAAAAAAAAAAAAAYAAAACAA=</HashCode>
       <FileName>DL\PassengerDL.cs</FileName>
@@ -76,14 +91,14 @@
   <Class Name="Airlines.FlightForms.FlightViewForm" Collapsed="true">
     <Position X="2" Y="16.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAARACAAAQBAAQCCAAgCACEIAAgCAAAAAIAAACA=</HashCode>
+      <HashCode>AAAACAARACAAAAAAAACCAAgCAAEIAAgCAAAAAIAAACA=</HashCode>
       <FileName>FlightForms\FlightViewForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Airlines.FlightForms.UpdateFlightForm" Collapsed="true">
     <Position X="2" Y="11.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAAAAQQDEAAAACACKIAMACEAoggBBABACAIAIAQCA=</HashCode>
+      <HashCode>AABAAAASQDEAAAACACKIAMACEAoggBBABACAIAIAQCA=</HashCode>
       <FileName>FlightForms\UpdateFlightForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -104,7 +119,7 @@
   <Class Name="Airlines.PassengerForms.BookFlightForm" Collapsed="true">
     <Position X="3.75" Y="11.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAkAQQDACAAAWCADAAOAGAAAggBBABECAAAIAgDg=</HashCode>
+      <HashCode>AACAAkAQQDACAAAGCADAAOAGAAAggBBABECAAAIAgDg=</HashCode>
       <FileName>PassengerForms\BookFlightForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -118,7 +133,7 @@
   <Class Name="Airlines.PassengerForms.PersonalDetails" Collapsed="true">
     <Position X="3.75" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AwEAAAQSACAAAAAAAASAIMACAAAAIJBABEAABAIgECY=</HashCode>
+      <HashCode>AwEAAAQSACAAAAAAAASAIMACAAAAIJBABEAAAAIgECY=</HashCode>
       <FileName>PassengerForms\PersonalDetails.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -139,7 +154,7 @@
   <Class Name="Airlines.PassengerForms.ViewBookedFlightsForm" Collapsed="true">
     <Position X="5.5" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAQACAAAAAAABCAAIgCABAAAABAAEAAAAAAACA=</HashCode>
+      <HashCode>AAAAAAAQACAAAAAAAACAAIgCABAAAABAAEAAAAAAACA=</HashCode>
       <FileName>PassengerForms\ViewBookedFlightsForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -167,35 +182,35 @@
   <Class Name="Airlines.Main" Collapsed="true">
     <Position X="3.75" Y="15.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABBAAQACAAARAwAQiCAIACAAACAAAgAAAAAAkgACA=</HashCode>
+      <HashCode>AAABBAAQACAAABAwAAiCAIACAAACAAAgAAAAAAEAACA=</HashCode>
       <FileName>Main.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Airlines.PassengerMainForm" Collapsed="true">
     <Position X="3.75" Y="14.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAQoCEAICCwABCCIABCIAAAAAAAEkAACAAAADA=</HashCode>
+      <HashCode>IAAAAAAQoCEAICCQABCCIABCIAAAAAAAEkAACAAAADA=</HashCode>
       <FileName>PassengerMainForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Airlines.TicketAgentMainForm" Collapsed="true">
     <Position X="3.75" Y="16.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQAAAGAAAAAABACIBAACAIAAABggASgQAhAAAEg=</HashCode>
+      <HashCode>AAAAAQAQAGAAAAAABACIBAACAIAAABggASAAAhAAAGg=</HashCode>
       <FileName>TicketAgentMainForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Airlines.TicketAgentForms.ViewOrderedPassengersForm" Collapsed="true">
     <Position X="2.75" Y="17.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAARACAQAAAAAACCAIACEAAEAABAAAAAAAAAACA=</HashCode>
+      <HashCode>AAAAAAARACAQAAAAAACCAIACEAAEAABAAAAAAAAAACA=</HashCode>
       <FileName>TicketAgentForms\ViewOrderedPassengersForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Airlines.TicketAgentForms.ViewPersonalDetailsForm" Collapsed="true">
     <Position X="4.5" Y="17.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAQACAAAQAAAQCCAIACAAAEAABAAAAEAAAAACA=</HashCode>
+      <HashCode>AAAAAAAQACAAAAAAAACCAIACAAAEAABAAAAEAAAAACA=</HashCode>
       <FileName>TicketAgentForms\ViewPersonalDetailsForm.cs</FileName>
     </TypeIdentifier>
   </Class>

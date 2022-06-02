@@ -65,7 +65,7 @@ namespace Airlines
             // menuStrpMain
             // 
             this.menuStrpMain.AutoSize = false;
-            this.menuStrpMain.BackColor = System.Drawing.Color.DarkRed;
+            this.menuStrpMain.BackColor = System.Drawing.Color.Firebrick;
             this.tableLayoutPanel1.SetColumnSpan(this.menuStrpMain, 2);
             this.menuStrpMain.Font = new System.Drawing.Font("Lucida Bright", 10F);
             this.menuStrpMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -130,7 +130,7 @@ namespace Airlines
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tableLayoutPanel2.BackgroundImage = global::Airlines.Properties.Resources.arkin_si_nkIIbgOVyl4_unsplash;
+            this.tableLayoutPanel2.BackgroundImage = global::Airlines.Properties.Resources.saj_shafique_h1Z4CNkncfo_unsplash;
             this.tableLayoutPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -145,6 +145,7 @@ namespace Airlines
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(766, 415);
             this.tableLayoutPanel2.TabIndex = 3;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // label1
             // 
@@ -152,7 +153,7 @@ namespace Airlines
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(34, 59);
             this.label1.Margin = new System.Windows.Forms.Padding(16, 55, 3, 65);
             this.label1.Name = "label1";
@@ -161,6 +162,7 @@ namespace Airlines
             this.label1.Text = "Fly with us and experience the exceptional services.Search for flights and book o" +
     "nline.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblSecText
             // 
@@ -168,7 +170,7 @@ namespace Airlines
             this.lblSecText.AutoSize = true;
             this.lblSecText.BackColor = System.Drawing.Color.Transparent;
             this.lblSecText.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.lblSecText.ForeColor = System.Drawing.Color.Maroon;
+            this.lblSecText.ForeColor = System.Drawing.Color.White;
             this.lblSecText.Location = new System.Drawing.Point(400, 55);
             this.lblSecText.Margin = new System.Windows.Forms.Padding(16, 55, 3, 50);
             this.lblSecText.Name = "lblSecText";
@@ -185,6 +187,7 @@ namespace Airlines
             this.ClientSize = new System.Drawing.Size(766, 450);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.ForeColor = System.Drawing.Color.White;
             this.MinimumSize = new System.Drawing.Size(586, 489);
             this.Name = "Main";
             this.Text = "PAK Airlines";

@@ -85,6 +85,7 @@ namespace Airlines.PassengerForms
             this.lblMainHeading.TabIndex = 75;
             this.lblMainHeading.Text = "Book a Flight";
             this.lblMainHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMainHeading.Click += new System.EventHandler(this.lblMainHeading_Click);
             // 
             // tableLayoutPanel2
             // 

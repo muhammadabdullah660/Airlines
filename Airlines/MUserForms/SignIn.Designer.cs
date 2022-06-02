@@ -138,6 +138,7 @@ namespace Airlines
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(281, 20);
             this.txtUserName.TabIndex = 32;
+            this.txtUserName.Validating += new System.ComponentModel.CancelEventHandler(this.txtUserName_Validating);
             // 
             // lblUserName
             // 
@@ -165,6 +166,8 @@ namespace Airlines
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackgroundImage = global::Airlines.Properties.Resources.nick_fewings_zF_pTLx_Dkg_unsplash;
+            this.tableLayoutPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));

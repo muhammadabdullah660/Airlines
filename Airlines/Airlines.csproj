@@ -270,5 +270,17 @@
   <ItemGroup>
     <None Include="Resources\arkin-si-nkIIbgOVyl4-unsplash.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\difa-naufal-YPj-96uaCwU-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\katie-moum-7XGtYefMXiQ-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nick-fewings-zF_pTLx_Dkg-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ross-parmly-rf6ywHVkrlY-unsplash.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

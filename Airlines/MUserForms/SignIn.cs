@@ -54,33 +54,40 @@ namespace Airlines
             string userName = txtUserName.Text;
             string userPassword = txtPassword.Text;
             string path = "MUser.txt";
-            MUser user = new MUser(userName , userPassword);
-            MUser userX = MUserDL.isValid(user);
-            if (userX != null)
+            if (userName != "" && userPassword != "")
             {
-                //MessageBox.Show(userX.UserName);
-                if (!userX.isAdmin())
+                MUser user = new MUser(userName , userPassword);
+                MUser userX = MUserDL.isValid(user);
+                if (userX != null)
                 {
-                    //Passenger p = PassengerDL.isValidPassenger(userX);
-                    PassengerMainForm pass = new PassengerMainForm(PassengerDL.isValidPassenger(userX));
-                    pass.Show();
+                    //MessageBox.Show(userX.UserName);
+                    if (!userX.isAdmin())
+                    {
+                        //Passenger p = PassengerDL.isValidPassenger(userX);
+                        PassengerMainForm pass = new PassengerMainForm(PassengerDL.isValidPassenger(userX));
+                        pass.Show();
 
-                }
-                else if (userX.isAdmin())
-                {
-                    userX = new TicketAgent();
-                    TicketAgent a;
-                    a = (TicketAgent)userX;
-                    TicketAgentMainForm adm = new TicketAgentMainForm(a);
-                    adm.Show();
-                }
-                else
-                {
-                    MessageBox.Show("User is invalid");
+                    }
+                    else if (userX.isAdmin())
+                    {
+                        userX = new TicketAgent();
+                        TicketAgent a;
+                        a = (TicketAgent)userX;
+                        TicketAgentMainForm adm = new TicketAgentMainForm(a);
+                        adm.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("User is invalid");
 
+                    }
                 }
+                clearData();
             }
-            clearData();
+            else
+            {
+                MessageBox.Show("Input must not be empty");
+            }
         }
 
         private void btnBack_Click (object sender , EventArgs e)
@@ -98,6 +105,10 @@ namespace Airlines
         private void menuStrpMain_ItemClicked (object sender , ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void txtUserName_Validating (object sender , CancelEventArgs e)
+        {
         }
     }
 }

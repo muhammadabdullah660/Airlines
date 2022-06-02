@@ -35,7 +35,5 @@ namespace Airlines.PassengerForms
         {
             this.Close();
         }
-
-
     }
 }

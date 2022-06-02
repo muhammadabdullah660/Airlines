@@ -30,6 +30,7 @@ namespace Airlines.PassengerForms
             p.Gender = cmbxGender.Text;
             p.EMail = txtEmail.Text;
             MessageBox.Show("Details Saved");
+            resetTxt();
         }
 
 
@@ -42,7 +43,16 @@ namespace Airlines.PassengerForms
         {
 
         }
-
+        private void resetTxt ()
+        {
+            foreach (Control C in this.Controls)
+            {
+                if (!(C is Button) && !(C is Label))
+                {
+                    C.Text = "";
+                }
+            }
+        }
         private void tableLayoutPanel2_Paint (object sender , PaintEventArgs e)
         {
 

@@ -46,11 +46,11 @@ namespace Airlines.DL
             {
                 if (i != p.MyFlights.Count - 1)
                 {
-                    flights += p.MyFlights[i].DepartCity + "^" + p.MyFlights[i].ArrCity + "^" + p.MyFlights[i].TripType + "^" + p.MyFlights[i].DepartDate + ";";
+                    flights += p.MyFlights[i].DepartCity + "^" + p.MyFlights[i].ArrCity + "^" + p.MyFlights[i].TripType + "^" + p.MyFlights[i].DepartDate + "^" + p.MyFlights[i].Price + ";";
                 }
                 else
                 {
-                    flights += p.MyFlights[i].DepartCity + "^" + p.MyFlights[i].ArrCity + "^" + p.MyFlights[i].TripType + "^" + p.MyFlights[i].DepartDate;
+                    flights += p.MyFlights[i].DepartCity + "^" + p.MyFlights[i].ArrCity + "^" + p.MyFlights[i].TripType + "^" + p.MyFlights[i].DepartDate + "^" + p.MyFlights[i].Price;
                 }
             }
 
@@ -75,11 +75,11 @@ namespace Airlines.DL
                 {
                     if (i != p.MyFlights.Count - 1)
                     {
-                        flights += p.MyFlights[i].DepartCity + "^" + p.MyFlights[i].ArrCity + "^" + p.MyFlights[i].TripType + "^" + p.MyFlights[i].DepartDate + ";";
+                        flights += p.MyFlights[i].DepartCity + "^" + p.MyFlights[i].ArrCity + "^" + p.MyFlights[i].TripType + "^" + p.MyFlights[i].DepartDate + "^" + p.MyFlights[i].Price + ";";
                     }
                     else
                     {
-                        flights += p.MyFlights[i].DepartCity + "^" + p.MyFlights[i].ArrCity + "^" + p.MyFlights[i].TripType + "^" + p.MyFlights[i].DepartDate;
+                        flights += p.MyFlights[i].DepartCity + "^" + p.MyFlights[i].ArrCity + "^" + p.MyFlights[i].TripType + "^" + p.MyFlights[i].DepartDate + "^" + p.MyFlights[i].Price;
                     }
                 }
 
@@ -125,6 +125,7 @@ namespace Airlines.DL
                             Flight myFlight = FlightDL.checkFlight(newFlight);
                             if (myFlight != null)
                             {
+                                myFlight.Price = double.Parse(splittedRecordx[4]);
                                 p.bookFlight(myFlight);
 
                             }

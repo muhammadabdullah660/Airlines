@@ -37,7 +37,7 @@ namespace Airlines.FlightForms
         {
             foreach (Control C in this.Controls)
             {
-                if (C is TextBox || C is MaskedTextBox || C is ComboBox)
+                if (!(C is Button) && !(C is Label))
                 {
                     C.Text = "";
                 }
@@ -47,6 +47,11 @@ namespace Airlines.FlightForms
         private void btnBack_Click (object sender , EventArgs e)
         {
             this.Close();
+        }
+
+        private void lblMainHeading_Click (object sender , EventArgs e)
+        {
+
         }
     }
 }

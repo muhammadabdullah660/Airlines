@@ -52,5 +52,10 @@ namespace Airlines.FlightForms
         {
             this.Close();
         }
+
+        private void lblMainHeading_Click (object sender , EventArgs e)
+        {
+
+        }
     }
 }

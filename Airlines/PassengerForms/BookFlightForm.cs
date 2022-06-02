@@ -64,7 +64,11 @@ namespace Airlines.PassengerForms
         {
             dateTimePicker1.Value = FlightDL.FlightsList.Where(x => x.DepartCity == cmbxDepartCity.Text && x.ArrCity == cmbxArrCity.Text).Select(x => x.DepartDate).First();
         }
-       
+
+        private void lblMainHeading_Click (object sender , EventArgs e)
+        {
+
+        }
     }
 }
 
